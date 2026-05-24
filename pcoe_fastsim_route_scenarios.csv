@@ -1,0 +1,5 @@
+scenario,pcoe_soh_assumption,status,route_distance_m,route_duration_s,starting_soc,final_soc,final_battery_pct,soc_drop_pct_points,min_soc,depletion_second,effective_kwh_allocated,estimated_energy_used_kwh,estimated_wh_per_km
+fresh_pack_soh_100pct,1.0,route_completed,8386.5,700,0.8,0.781089,78.1089,1.8911000000000011,0.781089,,55.3,1.0457783000000005,124.69782388362253
+pcoe_median_final_soh,0.9515421152010136,route_completed,8386.5,700,0.8,0.780126,78.01259999999999,1.9874000000000058,0.780126,,52.6203,1.045775842200003,124.69753081738543
+pcoe_mean_final_soh,1.0,route_completed,8386.5,700,0.8,0.781089,78.1089,1.8911000000000011,0.781089,,55.3,1.0457783000000005,124.69782388362253
+pcoe_eol_70pct_soh,0.7,route_completed,8386.5,700,0.8,0.772984,77.2984,2.701600000000004,0.772984,,38.71,1.0457893600000017,124.69914266976708

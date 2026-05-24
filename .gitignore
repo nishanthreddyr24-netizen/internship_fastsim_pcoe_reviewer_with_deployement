@@ -1,0 +1,26 @@
+*target/
+*.pyc
+.ipynb_checkpoints
+.pytest_cache
+.vscode
+.zed
+.DS_Store
+.idea
+.eggs
+build
+dist
+*.egg-info
+*.zip
+*.so
+*.pyd
+*pymoo_res*
+*env*/
+rust/
+*.dat
+.zed
+activate
+activate.sh
+
+# pixi environments
+.pixi
+*.egg-info

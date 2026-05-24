@@ -1,0 +1,13 @@
+station_id,name,address,lat,lon,distance_to_route_km,nearest_route_second,nearest_route_edge_index,connector_types,total_ports,max_power_kw,total_reviews,be6_compatible
+471366,Haridwar (Coming Soon),"H-82, Adhyapak Nagar, Naresh Park Extension, Nangloi, Delhi, 110041, India",28.669903612692863,77.06243623048067,8.527442363705411,0,0,CCS2,1,0.0,0,True
+557560,"A2, Commercial Complex Opp Jwala Heri Market","10, Friends Tower, Commercial Complex, A 2B Block, Paschim Vihar, Delhi, 110063, India",28.669176420194066,77.10049141198397,10.340971909554028,0,0,CCS2;Type 2,2,0.0,15,True
+306289,TML Autovikas Tata Power FC,"25/1/1, 25/1/1, Shivaji Marg, Block C, Najafgarh Road Industrial Area, New Delhi, Delhi 110015, India",28.663618,77.15619,13.163829561853072,700,12,CCS2;CHAdeMO,2,0.0,9,True
+391245,PetroMart,"C595+J44, Faridabad - Gurgaon Rd, Balola, Gurugram, Delhi 122102, India",28.418891374393937,77.1574155986309,16.245661817155327,700,12,CCS2,2,0.0,4,True
+967874,h,"C-206, Pandav Nagar, Near Akshardham, Pandav Nagar, Delhi, 110092, India",28.6126735,77.2772619,18.419727875619873,700,12,CCS2;GB/T;Type 2,3,0.0,0,True
+156627,My House,"97289 08957, Barwala, New Delhi, Delhi 110039, India",28.762329,77.06065,18.493277166628076,0,0,Type 2,1,0.0,0,True
+1587385,HP DARIYAPUR FILLING STATION,"Ground Floor, Dhansa Road, near Metropolis Met City, Daryapur, Haryana 124105, India",28.56334708748844,76.83976493775845,19.20557554729402,0,0,CCS2,1,0.0,0,True
+334259,IOCL Statiq AC Type-2,"Darbaripur Rd, Sector 70, Hasanpur, Haryana 122101, India",28.38624,77.006336,20.544963144522125,473,8,Type 2,1,0.0,2,True
+1843617,Shubhendu singh,"M7V6+XGC, Block A, Bhajanpura, Delhi, 110053, India",28.69488874597308,77.26118284375161,22.045551599394532,700,12,Type 2,1,0.0,0,True
+386444,"Vatika Town Square II, Sector 82","9XR5+7PG, Lamps Ave, Sector 82, Gurugram, Haryana 122004, India",28.390518,76.959226,22.090170438963025,473,8,CCS2,1,0.0,9,True
+465412,Courtyard Aravali Resort,"1, Pakhal, Faridabad, Haryana 121001, India",28.371746318892974,77.21036902579498,23.155214660428392,700,12,CCS2,2,30.0,5,True
+571574,Jio-Bp Pulse TPDDL Narela Sub City,"Unnamed Road, Sector 5, Bawana, Delhi, 110040, India",28.80483853079161,77.06222902983427,23.196999491347352,0,0,CCS2,1,0.0,2,True

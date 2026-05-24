@@ -1,0 +1,18 @@
+{
+  "assumptions": {
+    "vehicle_id": "IN-2025-0007",
+    "starting_soc": 0.8,
+    "protection_soc": 0.15,
+    "ambient_temp_c": 25.0,
+    "purpose": "Normal route depletion check at 15 percent buffer."
+  },
+  "panic_point": {
+    "protection_soc_fraction": 0.15,
+    "protection_soc_pct": 15.0,
+    "panic_point_found": false,
+    "status": "route_completed",
+    "depletion_second_from_simulator": null,
+    "depletion_coordinate_from_simulator": null,
+    "first_crossing_point": null
+  }
+}

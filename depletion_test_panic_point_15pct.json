@@ -1,0 +1,33 @@
+{
+  "assumptions": {
+    "vehicle_id": "IN-2025-0007",
+    "starting_soc": 0.16,
+    "protection_soc": 0.15,
+    "ambient_temp_c": 25.0,
+    "purpose": "Exact first coordinate where SOC crosses the 15 percent safety buffer."
+  },
+  "panic_point": {
+    "protection_soc_fraction": 0.15,
+    "protection_soc_pct": 15.0,
+    "panic_point_found": true,
+    "status": "depletion_triggered",
+    "depletion_second_from_simulator": 299,
+    "depletion_coordinate_from_simulator": {
+      "lat": 28.57308387096774,
+      "lon": 77.05932096774194
+    },
+    "first_crossing_point": {
+      "second": 299,
+      "edge_index": 6,
+      "lat": 28.573083871,
+      "lon": 77.059320968,
+      "speed_kph": 60.0,
+      "grade_pct": -0.2,
+      "cumulative_distance_m": 3831.992,
+      "soc_fraction": 0.149998,
+      "battery_pct": 14.9998,
+      "delta_soc_fraction": -3.9e-05,
+      "regen_or_gain": false
+    }
+  }
+}

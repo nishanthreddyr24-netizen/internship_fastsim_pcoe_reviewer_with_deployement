@@ -1,0 +1,2226 @@
+[
+  {
+    "location_id": "557560",
+    "name": "A2, Commercial Complex Opp Jwala Heri Market",
+    "address": "10, Friends Tower, Commercial Complex, A 2B Block, Paschim Vihar, Delhi, 110063, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.669176420194066,
+      "longitude": 77.10049141198397
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      },
+      {
+        "connector_type": "Type 2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "2",
+      "6",
+      "8",
+      "9"
+    ],
+    "total_reviews": 15,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "361075",
+    "name": "",
+    "address": "Cluster_gautam Buddha Nagar 8 Tower 13, IP AMAN SOCIETY, Sector 151, Aurangabad, Uttar Pradesh 201310, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.444348,
+      "longitude": 77.464212
+    },
+    "connectors": [
+      {
+        "connector_type": "J-1772",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "594455",
+    "name": "Dahiya EV Charger",
+    "address": "RW73+2CG, Pehladpur- Kirholi, Pahladpur-R, Haryana 131402, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.81203557580736,
+      "longitude": 76.9029825925827
+    },
+    "connectors": [
+      {
+        "connector_type": "Type 2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "3",
+      "2",
+      "1",
+      "9",
+      "7",
+      "4"
+    ],
+    "total_reviews": 2,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "333266",
+    "name": "Porsche Workshop Delhi",
+    "address": "2, NH19, Parmeshwari Colony, DLF Industrial Area, Sector 32, Faridabad, Haryana 121003, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.441403,
+      "longitude": 77.309158
+    },
+    "connectors": [
+      {
+        "connector_type": "Type 2",
+        "power_kw": 22.0,
+        "count": 2
+      }
+    ],
+    "amenities": [
+      "3",
+      "4",
+      "8"
+    ],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "334259",
+    "name": "IOCL Statiq AC Type-2",
+    "address": "Darbaripur Rd, Sector 70, Hasanpur, Haryana 122101, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.38624,
+      "longitude": 77.006336
+    },
+    "connectors": [
+      {
+        "connector_type": "Type 2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "4",
+      "3"
+    ],
+    "total_reviews": 2,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "629189",
+    "name": "Jio BP",
+    "address": "GQ34+CV7, Aurangpur, Haryana 124103, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.503502826036875,
+      "longitude": 76.75728255436124
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 2
+      },
+      {
+        "connector_type": "Type 2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "3",
+      "4"
+    ],
+    "total_reviews": 13,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "465412",
+    "name": "Courtyard Aravali Resort",
+    "address": "1, Pakhal, Faridabad, Haryana 121001, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.371746318892974,
+      "longitude": 77.21036902579498
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 30.0,
+        "count": 2
+      }
+    ],
+    "amenities": [
+      "2",
+      "4",
+      "3",
+      "1"
+    ],
+    "total_reviews": 5,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "368256",
+    "name": "TML Autovikas",
+    "address": "170, Mathura Rd, Pocket 1, Sector 5, Faridabad, Haryana 121001, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.362782,
+      "longitude": 77.314841
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 30.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "4",
+      "8",
+      "3"
+    ],
+    "total_reviews": 14,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "1843617",
+    "name": "Shubhendu singh",
+    "address": "M7V6+XGC, Block A, Bhajanpura, Delhi, 110053, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.69488874597308,
+      "longitude": 77.26118284375161
+    },
+    "connectors": [
+      {
+        "connector_type": "Wall",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "1156613",
+    "name": "Indospace Luhari I",
+    "address": "9PQ2+36H, Kheda, Haryana 124108, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.38749668330898,
+      "longitude": 76.70071477975178
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "306289",
+    "name": "TML Autovikas Tata Power FC",
+    "address": "25/1/1, 25/1/1, Shivaji Marg, Block C, Najafgarh Road Industrial Area, New Delhi, Delhi 110015, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.663618,
+      "longitude": 77.15619
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      },
+      {
+        "connector_type": "CHAdeMO",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "4"
+    ],
+    "total_reviews": 9,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "1192077",
+    "name": "Centurian Park Terrace Homes",
+    "address": "C56, Amrapali Dream Valley, Greater Noida, Ithaira, Uttar Pradesh 201318, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.597731658453124,
+      "longitude": 77.44456451386213
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      },
+      {
+        "connector_type": "Type 2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "471366",
+    "name": "Haridwar (Coming Soon)",
+    "address": "H-82, Adhyapak Nagar, Naresh Park Extension, Nangloi, Delhi, 110041, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.669903612692863,
+      "longitude": 77.06243623048067
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "2"
+    ],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "571574",
+    "name": "Jio-Bp Pulse TPDDL Narela Sub City",
+    "address": "Unnamed Road, Sector 5, Bawana, Delhi, 110040, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.80483853079161,
+      "longitude": 77.06222902983427
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 2,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "1587385",
+    "name": "HP DARIYAPUR FILLING STATION",
+    "address": "Ground Floor, Dhansa Road, near Metropolis Met City, Daryapur, Haryana 124105, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.56334708748844,
+      "longitude": 76.83976493775845
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "310280",
+    "name": "Ethnic India Resort",
+    "address": "Srinagar - Kanyakumari Hwy, Rai, Haryana 131029, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.93155,
+      "longitude": 77.100049
+    },
+    "connectors": [
+      {
+        "connector_type": "CHAdeMO",
+        "power_kw": 0.0,
+        "count": 2
+      }
+    ],
+    "amenities": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "total_reviews": 3,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "343826",
+    "name": "Anand Cinema Hall",
+    "address": "Anand Cinema Hall, Old DC Rd, SS Park Extn, Vikaspuri, Sonipat, Haryana 131304, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.980389,
+      "longitude": 77.028801
+    },
+    "connectors": [
+      {
+        "connector_type": "Type 2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "3",
+      "7",
+      "4"
+    ],
+    "total_reviews": 4,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "967874",
+    "name": "h",
+    "address": "C-206, Pandav Nagar, Near Akshardham, Pandav Nagar, Delhi, 110092, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.6126735,
+      "longitude": 77.2772619
+    },
+    "connectors": [
+      {
+        "connector_type": "GB/T (Fast)",
+        "power_kw": 0.0,
+        "count": 1
+      },
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      },
+      {
+        "connector_type": "Wall",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "120495",
+    "name": "Udyog Vihar Phase V",
+    "address": "814-816, Udyog Vihar Phase V, Udyog Vihar, Phase V, Sector 19, Gurugram, Haryana 122008, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.501231,
+      "longitude": 77.086387
+    },
+    "connectors": [
+      {
+        "connector_type": "J-1772",
+        "power_kw": 0.0,
+        "count": 2
+      }
+    ],
+    "amenities": [
+      "8",
+      "7",
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "total_reviews": 9,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "514625",
+    "name": "BPCL EPE",
+    "address": "QCCX+RX6, Eastern Peripheral Expy, Milak/Milk Chakarpur, Uttar Pradesh 201206, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.77232645077839,
+      "longitude": 77.4493653309146
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 2
+      }
+    ],
+    "amenities": [
+      "4",
+      "3"
+    ],
+    "total_reviews": 11,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "1794154",
+    "name": "Radisson Gurgaon Udyog Vihar",
+    "address": "Nh-8, Plot No. 406, Udyog Vihar Phase 3 Rd, Udyog Vihar III, Sector 20, Gurugram, Haryana 122016, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.5097521,
+      "longitude": 77.0922015
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS1",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "1",
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "156627",
+    "name": "My House",
+    "address": "97289 08957, Barwala, New Delhi, Delhi 110039, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.762329,
+      "longitude": 77.06065
+    },
+    "connectors": [
+      {
+        "connector_type": "Wall",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "4"
+    ],
+    "total_reviews": 0,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "386444",
+    "name": "Vatika Town Square II, Sector 82",
+    "address": "9XR5+7PG, Lamps Ave, Sector 82, Gurugram, Haryana 122004, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.390518,
+      "longitude": 76.959226
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 9,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "455265",
+    "name": "Tyagi IOC Petrol Pump",
+    "address": "3, Panchsheel Colony, Lal Kuan, Ghaziabad, Uttar Pradesh 201009, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.619506,
+      "longitude": 77.483792
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [
+      "4"
+    ],
+    "total_reviews": 24,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "1766575",
+    "name": "BPCL charger",
+    "address": "WW3M+CQP, Anandpur, Haryana 131403, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.90347554325395,
+      "longitude": 76.93399890802813
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 2
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 1,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "587501",
+    "name": "Earthtron EV - Community Center Sector 15 Market",
+    "address": "Sector 15 Main market, Sector 15, Faridabad, Haryana 121007, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.39554639419844,
+      "longitude": 77.32235804200172
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 11,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "456429",
+    "name": "",
+    "address": "WP43+CG7, Rohtak - Sonipat Rd, Bhalaut, Haryana 124401, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.905786,
+      "longitude": 76.703907
+    },
+    "connectors": [
+      {
+        "connector_type": "Wall (BS1363)",
+        "power_kw": 0.0,
+        "count": 1
+      }
+    ],
+    "amenities": [],
+    "total_reviews": 1,
+    "data_source": "plugshare"
+  },
+  {
+    "location_id": "391245",
+    "name": "PetroMart",
+    "address": "C595+J44, Faridabad - Gurgaon Rd, Balola, Gurugram, Delhi 122102, India",
+    "city": "N/A",
+    "state": "N/A",
+    "country": "India",
+    "coordinates": {
+      "latitude": 28.418891374393937,
+      "longitude": 77.1574155986309
+    },
+    "connectors": [
+      {
+        "connector_type": "CCS2",
+        "power_kw": 0.0,
+        "count": 2
+      }
+    ],
+    "amenities": [
+      "4"
+    ],
+    "total_reviews": 4,
+    "data_source": "plugshare"
+  },
+  {
+    "id": "557560",
+    "name": "A2, Commercial Complex Opp Jwala Heri Market",
+    "operator_id": null,
+    "city_id": null,
+    "address": "10, Friends Tower, Commercial Complex, A 2B Block, Paschim Vihar, Delhi, 110063, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.66917642,
+    "lng": 77.10049141,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2",
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:24.655426+00:00",
+    "updated_at": "2026-05-18T20:52:24.655426+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"2\",\"6\",\"8\",\"9\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.66917642,
+      "longitude": 77.10049141
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "361075",
+    "name": "Unknown EV Station",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Cluster_gautam Buddha Nagar 8 Tower 13, IP AMAN SOCIETY, Sector 151, Aurangabad, Uttar Pradesh 201310, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.444348,
+    "lng": 77.464212,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:25.68341+00:00",
+    "updated_at": "2026-05-18T20:52:25.68341+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.444348,
+      "longitude": 77.464212
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "594455",
+    "name": "Dahiya EV Charger",
+    "operator_id": null,
+    "city_id": null,
+    "address": "RW73+2CG, Pehladpur- Kirholi, Pahladpur-R, Haryana 131402, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.81203558,
+    "lng": 76.90298259,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:41.358471+00:00",
+    "updated_at": "2026-05-18T20:52:41.358471+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"3\",\"2\",\"1\",\"9\",\"7\",\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.81203558,
+      "longitude": 76.90298259
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "333266",
+    "name": "Porsche Workshop Delhi",
+    "operator_id": null,
+    "city_id": null,
+    "address": "2, NH19, Parmeshwari Colony, DLF Industrial Area, Sector 32, Faridabad, Haryana 121003, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.441403,
+    "lng": 77.309158,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "DC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 22.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:43.228206+00:00",
+    "updated_at": "2026-05-18T20:52:43.228206+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"3\",\"4\",\"8\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.441403,
+      "longitude": 77.309158
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "334259",
+    "name": "IOCL Statiq AC Type-2",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Darbaripur Rd, Sector 70, Hasanpur, Haryana 122101, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.38624,
+    "lng": 77.006336,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:45.588677+00:00",
+    "updated_at": "2026-05-18T20:52:45.588677+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\",\"3\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.38624,
+      "longitude": 77.006336
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "629189",
+    "name": "Jio BP",
+    "operator_id": null,
+    "city_id": null,
+    "address": "GQ34+CV7, Aurangpur, Haryana 124103, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.50350283,
+    "lng": 76.75728255,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2",
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 3,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:45.606493+00:00",
+    "updated_at": "2026-05-18T20:52:45.606493+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"3\",\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.50350283,
+      "longitude": 76.75728255
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "465412",
+    "name": "Courtyard Aravali Resort",
+    "operator_id": null,
+    "city_id": null,
+    "address": "1, Pakhal, Faridabad, Haryana 121001, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.37174632,
+    "lng": 77.21036903,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "DC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 30.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:45.774228+00:00",
+    "updated_at": "2026-05-18T20:52:45.774228+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"2\",\"4\",\"3\",\"1\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.37174632,
+      "longitude": 77.21036903
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "368256",
+    "name": "TML Autovikas",
+    "operator_id": null,
+    "city_id": null,
+    "address": "170, Mathura Rd, Pocket 1, Sector 5, Faridabad, Haryana 121001, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.362782,
+    "lng": 77.314841,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "DC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 30.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:47.296661+00:00",
+    "updated_at": "2026-05-18T20:52:47.296661+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\",\"8\",\"3\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.362782,
+      "longitude": 77.314841
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "1843617",
+    "name": "Shubhendu singh",
+    "operator_id": null,
+    "city_id": null,
+    "address": "M7V6+XGC, Block A, Bhajanpura, Delhi, 110053, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.69488875,
+    "lng": 77.26118284,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:48.602168+00:00",
+    "updated_at": "2026-05-18T20:52:48.602168+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.69488875,
+      "longitude": 77.26118284
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "1156613",
+    "name": "Indospace Luhari I",
+    "operator_id": null,
+    "city_id": null,
+    "address": "9PQ2+36H, Kheda, Haryana 124108, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.38749668,
+    "lng": 76.70071478,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:50.967818+00:00",
+    "updated_at": "2026-05-18T20:52:50.967818+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.38749668,
+      "longitude": 76.70071478
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "306289",
+    "name": "TML Autovikas Tata Power FC",
+    "operator_id": null,
+    "city_id": null,
+    "address": "25/1/1, 25/1/1, Shivaji Marg, Block C, Najafgarh Road Industrial Area, New Delhi, Delhi 110015, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.663618,
+    "lng": 77.15619,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2",
+      "CHAdeMO"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:53.972841+00:00",
+    "updated_at": "2026-05-18T20:52:53.972841+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.663618,
+      "longitude": 77.15619
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "1192077",
+    "name": "Centurian Park Terrace Homes",
+    "operator_id": null,
+    "city_id": null,
+    "address": "C56, Amrapali Dream Valley, Greater Noida, Ithaira, Uttar Pradesh 201318, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.59773166,
+    "lng": 77.44456451,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2",
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:55.40462+00:00",
+    "updated_at": "2026-05-18T20:52:55.40462+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.59773166,
+      "longitude": 77.44456451
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "471366",
+    "name": "Haridwar (Coming Soon)",
+    "operator_id": null,
+    "city_id": null,
+    "address": "H-82, Adhyapak Nagar, Naresh Park Extension, Nangloi, Delhi, 110041, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.66990361,
+    "lng": 77.06243623,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:55.810395+00:00",
+    "updated_at": "2026-05-18T20:52:55.810395+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"2\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.66990361,
+      "longitude": 77.06243623
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "571574",
+    "name": "Jio-Bp Pulse TPDDL Narela Sub City",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Unnamed Road, Sector 5, Bawana, Delhi, 110040, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.80483853,
+    "lng": 77.06222903,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:58.516617+00:00",
+    "updated_at": "2026-05-18T20:52:58.516617+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.80483853,
+      "longitude": 77.06222903
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "1587385",
+    "name": "HP DARIYAPUR FILLING STATION",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Ground Floor, Dhansa Road, near Metropolis Met City, Daryapur, Haryana 124105, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.56334709,
+    "lng": 76.83976494,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:58.528308+00:00",
+    "updated_at": "2026-05-18T20:52:58.528308+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.56334709,
+      "longitude": 76.83976494
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "310280",
+    "name": "Ethnic India Resort",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Srinagar - Kanyakumari Hwy, Rai, Haryana 131029, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.93155,
+    "lng": 77.100049,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CHAdeMO"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:52:59.733555+00:00",
+    "updated_at": "2026-05-18T20:52:59.733555+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"1\",\"2\",\"3\",\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.93155,
+      "longitude": 77.100049
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "343826",
+    "name": "Anand Cinema Hall",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Anand Cinema Hall, Old DC Rd, SS Park Extn, Vikaspuri, Sonipat, Haryana 131304, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.980389,
+    "lng": 77.028801,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:00.67072+00:00",
+    "updated_at": "2026-05-18T20:53:00.67072+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"3\",\"7\",\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.980389,
+      "longitude": 77.028801
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "967874",
+    "name": "h",
+    "operator_id": null,
+    "city_id": null,
+    "address": "C-206, Pandav Nagar, Near Akshardham, Pandav Nagar, Delhi, 110092, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.6126735,
+    "lng": 77.2772619,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "GB/T",
+      "CCS2",
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 3,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:03.208279+00:00",
+    "updated_at": "2026-05-18T20:53:03.208279+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.6126735,
+      "longitude": 77.2772619
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "120495",
+    "name": "Udyog Vihar Phase V",
+    "operator_id": null,
+    "city_id": null,
+    "address": "814-816, Udyog Vihar Phase V, Udyog Vihar, Phase V, Sector 19, Gurugram, Haryana 122008, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.501231,
+    "lng": 77.086387,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:18.027171+00:00",
+    "updated_at": "2026-05-18T20:53:18.027171+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"8\",\"7\",\"1\",\"3\",\"2\",\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.501231,
+      "longitude": 77.086387
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "514625",
+    "name": "BPCL EPE",
+    "operator_id": null,
+    "city_id": null,
+    "address": "QCCX+RX6, Eastern Peripheral Expy, Milak/Milk Chakarpur, Uttar Pradesh 201206, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.77232645,
+    "lng": 77.44936533,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:20.018759+00:00",
+    "updated_at": "2026-05-18T20:53:20.018759+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\",\"3\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.77232645,
+      "longitude": 77.44936533
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "1794154",
+    "name": "Radisson Gurgaon Udyog Vihar",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Nh-8, Plot No. 406, Udyog Vihar Phase 3 Rd, Udyog Vihar III, Sector 20, Gurugram, Haryana 122016, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.5097521,
+    "lng": 77.0922015,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:24.218252+00:00",
+    "updated_at": "2026-05-18T20:53:24.218252+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"1\",\"2\",\"3\",\"5\",\"7\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.5097521,
+      "longitude": 77.0922015
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "156627",
+    "name": "My House",
+    "operator_id": null,
+    "city_id": null,
+    "address": "97289 08957, Barwala, New Delhi, Delhi 110039, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.762329,
+    "lng": 77.06065,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:26.446475+00:00",
+    "updated_at": "2026-05-18T20:53:26.446475+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.762329,
+      "longitude": 77.06065
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "386444",
+    "name": "Vatika Town Square II, Sector 82",
+    "operator_id": null,
+    "city_id": null,
+    "address": "9XR5+7PG, Lamps Ave, Sector 82, Gurugram, Haryana 122004, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.390518,
+    "lng": 76.959226,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:27.26637+00:00",
+    "updated_at": "2026-05-18T20:53:27.26637+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.390518,
+      "longitude": 76.959226
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "455265",
+    "name": "Tyagi IOC Petrol Pump",
+    "operator_id": null,
+    "city_id": null,
+    "address": "3, Panchsheel Colony, Lal Kuan, Ghaziabad, Uttar Pradesh 201009, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.619506,
+    "lng": 77.483792,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:36.639977+00:00",
+    "updated_at": "2026-05-18T20:53:36.639977+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.619506,
+      "longitude": 77.483792
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "1766575",
+    "name": "BPCL charger",
+    "operator_id": null,
+    "city_id": null,
+    "address": "WW3M+CQP, Anandpur, Haryana 131403, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.90347554,
+    "lng": 76.93399891,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:38.408236+00:00",
+    "updated_at": "2026-05-18T20:53:38.408236+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.90347554,
+      "longitude": 76.93399891
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "587501",
+    "name": "Earthtron EV - Community Center Sector 15 Market",
+    "operator_id": null,
+    "city_id": null,
+    "address": "Sector 15 Main market, Sector 15, Faridabad, Haryana 121007, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.39554639,
+    "lng": 77.32235804,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:39.805547+00:00",
+    "updated_at": "2026-05-18T20:53:39.805547+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.39554639,
+      "longitude": 77.32235804
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "456429",
+    "name": "Unknown EV Station",
+    "operator_id": null,
+    "city_id": null,
+    "address": "WP43+CG7, Rohtak - Sonipat Rd, Bhalaut, Haryana 124401, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.905786,
+    "lng": 76.703907,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "Type 2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 1,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:39.817322+00:00",
+    "updated_at": "2026-05-18T20:53:39.817322+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.905786,
+      "longitude": 76.703907
+    },
+    "data_source": "pluginany"
+  },
+  {
+    "id": "391245",
+    "name": "PetroMart",
+    "operator_id": null,
+    "city_id": null,
+    "address": "C595+J44, Faridabad - Gurgaon Rd, Balola, Gurugram, Delhi 122102, India",
+    "country_code": "IND",
+    "state_code": null,
+    "state_name": "N/A",
+    "city_name": "N/A",
+    "pincode": null,
+    "lat": 28.41889137,
+    "lng": 77.1574156,
+    "location_type": "Public Fast Charging",
+    "charger_types": [
+      "AC"
+    ],
+    "connector_types": [
+      "CCS2"
+    ],
+    "vehicle_types": [],
+    "num_chargers": 2,
+    "power_kw": 0.0,
+    "price_per_kwh": null,
+    "status": "Active",
+    "availability": "Available",
+    "map_sync": "Not Synced",
+    "vertical_type": "Charging",
+    "is_deleted": false,
+    "deleted_at": null,
+    "created_by": null,
+    "updated_by": null,
+    "created_at": "2026-05-18T20:53:41.167648+00:00",
+    "updated_at": "2026-05-18T20:53:41.167648+00:00",
+    "charger_category": "Public",
+    "host_name": null,
+    "host_phone": null,
+    "host_email": null,
+    "host_hours": null,
+    "power_details": null,
+    "price_ac_per_kwh": null,
+    "price_dc_per_kwh": null,
+    "currency_code": "INR",
+    "is_battery_swap": false,
+    "poi_type": null,
+    "amenities": "[\"4\"]",
+    "power_ac_kw": null,
+    "power_dc_kw": null,
+    "coordinates": {
+      "latitude": 28.41889137,
+      "longitude": 77.1574156
+    },
+    "data_source": "pluginany"
+  }
+]

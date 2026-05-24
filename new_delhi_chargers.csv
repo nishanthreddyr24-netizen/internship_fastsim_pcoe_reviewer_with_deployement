@@ -1,0 +1,57 @@
+location_id,name,address,city,state,country,pincode,latitude,longitude,operator,status,availability,num_chargers,total_reviews,amenities,connectors,charger_types,data_source
+557560,"A2, Commercial Complex Opp Jwala Heri Market","10, Friends Tower, Commercial Complex, A 2B Block, Paschim Vihar, Delhi, 110063, India",N/A,N/A,India,,28.669176420194066,77.10049141198397,,,,,15,2; 6; 8; 9,CCS2 (0.0kW x1); Type 2 (0.0kW x1),,plugshare
+361075,,"Cluster_gautam Buddha Nagar 8 Tower 13, IP AMAN SOCIETY, Sector 151, Aurangabad, Uttar Pradesh 201310, India",N/A,N/A,India,,28.444348,77.464212,,,,,0,,J-1772 (0.0kW x1),,plugshare
+594455,Dahiya EV Charger,"RW73+2CG, Pehladpur- Kirholi, Pahladpur-R, Haryana 131402, India",N/A,N/A,India,,28.81203557580736,76.9029825925827,,,,,2,3; 2; 1; 9; 7; 4,Type 2 (0.0kW x1),,plugshare
+333266,Porsche Workshop Delhi,"2, NH19, Parmeshwari Colony, DLF Industrial Area, Sector 32, Faridabad, Haryana 121003, India",N/A,N/A,India,,28.441403,77.309158,,,,,0,3; 4; 8,Type 2 (22.0kW x2),,plugshare
+334259,IOCL Statiq AC Type-2,"Darbaripur Rd, Sector 70, Hasanpur, Haryana 122101, India",N/A,N/A,India,,28.38624,77.006336,,,,,2,4; 3,Type 2 (0.0kW x1),,plugshare
+629189,Jio BP,"GQ34+CV7, Aurangpur, Haryana 124103, India",N/A,N/A,India,,28.503502826036875,76.75728255436124,,,,,13,3; 4,CCS2 (0.0kW x2); Type 2 (0.0kW x1),,plugshare
+465412,Courtyard Aravali Resort,"1, Pakhal, Faridabad, Haryana 121001, India",N/A,N/A,India,,28.371746318892974,77.21036902579498,,,,,5,2; 4; 3; 1,CCS2 (30.0kW x2),,plugshare
+368256,TML Autovikas,"170, Mathura Rd, Pocket 1, Sector 5, Faridabad, Haryana 121001, India",N/A,N/A,India,,28.362782,77.314841,,,,,14,4; 8; 3,CCS2 (30.0kW x1),,plugshare
+1843617,Shubhendu singh,"M7V6+XGC, Block A, Bhajanpura, Delhi, 110053, India",N/A,N/A,India,,28.69488874597308,77.26118284375161,,,,,0,,Wall (0.0kW x1),,plugshare
+1156613,Indospace Luhari I,"9PQ2+36H, Kheda, Haryana 124108, India",N/A,N/A,India,,28.38749668330898,76.70071477975178,,,,,0,,CCS2 (0.0kW x1),,plugshare
+306289,TML Autovikas Tata Power FC,"25/1/1, 25/1/1, Shivaji Marg, Block C, Najafgarh Road Industrial Area, New Delhi, Delhi 110015, India",N/A,N/A,India,,28.663618,77.15619,,,,,9,4,CCS2 (0.0kW x1); CHAdeMO (0.0kW x1),,plugshare
+1192077,Centurian Park Terrace Homes,"C56, Amrapali Dream Valley, Greater Noida, Ithaira, Uttar Pradesh 201318, India",N/A,N/A,India,,28.597731658453124,77.44456451386213,,,,,0,,CCS2 (0.0kW x1); Type 2 (0.0kW x1),,plugshare
+471366,Haridwar (Coming Soon),"H-82, Adhyapak Nagar, Naresh Park Extension, Nangloi, Delhi, 110041, India",N/A,N/A,India,,28.669903612692863,77.06243623048067,,,,,0,2,CCS2 (0.0kW x1),,plugshare
+571574,Jio-Bp Pulse TPDDL Narela Sub City,"Unnamed Road, Sector 5, Bawana, Delhi, 110040, India",N/A,N/A,India,,28.80483853079161,77.06222902983427,,,,,2,,CCS2 (0.0kW x1),,plugshare
+1587385,HP DARIYAPUR FILLING STATION,"Ground Floor, Dhansa Road, near Metropolis Met City, Daryapur, Haryana 124105, India",N/A,N/A,India,,28.56334708748844,76.83976493775845,,,,,0,,CCS2 (0.0kW x1),,plugshare
+310280,Ethnic India Resort,"Srinagar - Kanyakumari Hwy, Rai, Haryana 131029, India",N/A,N/A,India,,28.93155,77.100049,,,,,3,1; 2; 3; 4,CHAdeMO (0.0kW x2),,plugshare
+343826,Anand Cinema Hall,"Anand Cinema Hall, Old DC Rd, SS Park Extn, Vikaspuri, Sonipat, Haryana 131304, India",N/A,N/A,India,,28.980389,77.028801,,,,,4,3; 7; 4,Type 2 (0.0kW x1),,plugshare
+967874,h,"C-206, Pandav Nagar, Near Akshardham, Pandav Nagar, Delhi, 110092, India",N/A,N/A,India,,28.6126735,77.2772619,,,,,0,,GB/T (Fast) (0.0kW x1); CCS2 (0.0kW x1); Wall (0.0kW x1),,plugshare
+120495,Udyog Vihar Phase V,"814-816, Udyog Vihar Phase V, Udyog Vihar, Phase V, Sector 19, Gurugram, Haryana 122008, India",N/A,N/A,India,,28.501231,77.086387,,,,,9,8; 7; 1; 3; 2; 4,J-1772 (0.0kW x2),,plugshare
+514625,BPCL EPE,"QCCX+RX6, Eastern Peripheral Expy, Milak/Milk Chakarpur, Uttar Pradesh 201206, India",N/A,N/A,India,,28.77232645077839,77.4493653309146,,,,,11,4; 3,CCS2 (0.0kW x2),,plugshare
+1794154,Radisson Gurgaon Udyog Vihar,"Nh-8, Plot No. 406, Udyog Vihar Phase 3 Rd, Udyog Vihar III, Sector 20, Gurugram, Haryana 122016, India",N/A,N/A,India,,28.5097521,77.0922015,,,,,0,1; 2; 3; 5; 7,CCS1 (0.0kW x1),,plugshare
+156627,My House,"97289 08957, Barwala, New Delhi, Delhi 110039, India",N/A,N/A,India,,28.762329,77.06065,,,,,0,4,Wall (0.0kW x1),,plugshare
+386444,"Vatika Town Square II, Sector 82","9XR5+7PG, Lamps Ave, Sector 82, Gurugram, Haryana 122004, India",N/A,N/A,India,,28.390518,76.959226,,,,,9,,CCS2 (0.0kW x1),,plugshare
+455265,Tyagi IOC Petrol Pump,"3, Panchsheel Colony, Lal Kuan, Ghaziabad, Uttar Pradesh 201009, India",N/A,N/A,India,,28.619506,77.483792,,,,,24,4,CCS2 (0.0kW x1),,plugshare
+1766575,BPCL charger,"WW3M+CQP, Anandpur, Haryana 131403, India",N/A,N/A,India,,28.90347554325395,76.93399890802813,,,,,1,,CCS2 (0.0kW x2),,plugshare
+587501,Earthtron EV - Community Center Sector 15 Market,"Sector 15 Main market, Sector 15, Faridabad, Haryana 121007, India",N/A,N/A,India,,28.39554639419844,77.32235804200172,,,,,11,,CCS2 (0.0kW x1),,plugshare
+456429,,"WP43+CG7, Rohtak - Sonipat Rd, Bhalaut, Haryana 124401, India",N/A,N/A,India,,28.905786,76.703907,,,,,1,,Wall (BS1363) (0.0kW x1),,plugshare
+391245,PetroMart,"C595+J44, Faridabad - Gurgaon Rd, Balola, Gurugram, Delhi 122102, India",N/A,N/A,India,,28.418891374393937,77.1574155986309,,,,,4,4,CCS2 (0.0kW x2),,plugshare
+,"A2, Commercial Complex Opp Jwala Heri Market","10, Friends Tower, Commercial Complex, A 2B Block, Paschim Vihar, Delhi, 110063, India",,,,,28.66917642,77.10049141,,Active,Available,2,0,"[; ""; 2; ""; ,; ""; 6; ""; ,; ""; 8; ""; ,; ""; 9; ""; ]",CCS2; Type 2,AC,pluginany
+,Unknown EV Station,"Cluster_gautam Buddha Nagar 8 Tower 13, IP AMAN SOCIETY, Sector 151, Aurangabad, Uttar Pradesh 201310, India",,,,,28.444348,77.464212,,Active,Available,1,0,[; ],,AC,pluginany
+,Dahiya EV Charger,"RW73+2CG, Pehladpur- Kirholi, Pahladpur-R, Haryana 131402, India",,,,,28.81203558,76.90298259,,Active,Available,1,0,"[; ""; 3; ""; ,; ""; 2; ""; ,; ""; 1; ""; ,; ""; 9; ""; ,; ""; 7; ""; ,; ""; 4; ""; ]",Type 2,AC,pluginany
+,Porsche Workshop Delhi,"2, NH19, Parmeshwari Colony, DLF Industrial Area, Sector 32, Faridabad, Haryana 121003, India",,,,,28.441403,77.309158,,Active,Available,2,0,"[; ""; 3; ""; ,; ""; 4; ""; ,; ""; 8; ""; ]",Type 2,DC,pluginany
+,IOCL Statiq AC Type-2,"Darbaripur Rd, Sector 70, Hasanpur, Haryana 122101, India",,,,,28.38624,77.006336,,Active,Available,1,0,"[; ""; 4; ""; ,; ""; 3; ""; ]",Type 2,AC,pluginany
+,Jio BP,"GQ34+CV7, Aurangpur, Haryana 124103, India",,,,,28.50350283,76.75728255,,Active,Available,3,0,"[; ""; 3; ""; ,; ""; 4; ""; ]",CCS2; Type 2,AC,pluginany
+,Courtyard Aravali Resort,"1, Pakhal, Faridabad, Haryana 121001, India",,,,,28.37174632,77.21036903,,Active,Available,2,0,"[; ""; 2; ""; ,; ""; 4; ""; ,; ""; 3; ""; ,; ""; 1; ""; ]",CCS2,DC,pluginany
+,TML Autovikas,"170, Mathura Rd, Pocket 1, Sector 5, Faridabad, Haryana 121001, India",,,,,28.362782,77.314841,,Active,Available,1,0,"[; ""; 4; ""; ,; ""; 8; ""; ,; ""; 3; ""; ]",CCS2,DC,pluginany
+,Shubhendu singh,"M7V6+XGC, Block A, Bhajanpura, Delhi, 110053, India",,,,,28.69488875,77.26118284,,Active,Available,1,0,[; ],Type 2,AC,pluginany
+,Indospace Luhari I,"9PQ2+36H, Kheda, Haryana 124108, India",,,,,28.38749668,76.70071478,,Active,Available,1,0,[; ],CCS2,AC,pluginany
+,TML Autovikas Tata Power FC,"25/1/1, 25/1/1, Shivaji Marg, Block C, Najafgarh Road Industrial Area, New Delhi, Delhi 110015, India",,,,,28.663618,77.15619,,Active,Available,2,0,"[; ""; 4; ""; ]",CCS2; CHAdeMO,AC,pluginany
+,Centurian Park Terrace Homes,"C56, Amrapali Dream Valley, Greater Noida, Ithaira, Uttar Pradesh 201318, India",,,,,28.59773166,77.44456451,,Active,Available,2,0,[; ],CCS2; Type 2,AC,pluginany
+,Haridwar (Coming Soon),"H-82, Adhyapak Nagar, Naresh Park Extension, Nangloi, Delhi, 110041, India",,,,,28.66990361,77.06243623,,Active,Available,1,0,"[; ""; 2; ""; ]",CCS2,AC,pluginany
+,Jio-Bp Pulse TPDDL Narela Sub City,"Unnamed Road, Sector 5, Bawana, Delhi, 110040, India",,,,,28.80483853,77.06222903,,Active,Available,1,0,[; ],CCS2,AC,pluginany
+,HP DARIYAPUR FILLING STATION,"Ground Floor, Dhansa Road, near Metropolis Met City, Daryapur, Haryana 124105, India",,,,,28.56334709,76.83976494,,Active,Available,1,0,[; ],CCS2,AC,pluginany
+,Ethnic India Resort,"Srinagar - Kanyakumari Hwy, Rai, Haryana 131029, India",,,,,28.93155,77.100049,,Active,Available,2,0,"[; ""; 1; ""; ,; ""; 2; ""; ,; ""; 3; ""; ,; ""; 4; ""; ]",CHAdeMO,AC,pluginany
+,Anand Cinema Hall,"Anand Cinema Hall, Old DC Rd, SS Park Extn, Vikaspuri, Sonipat, Haryana 131304, India",,,,,28.980389,77.028801,,Active,Available,1,0,"[; ""; 3; ""; ,; ""; 7; ""; ,; ""; 4; ""; ]",Type 2,AC,pluginany
+,h,"C-206, Pandav Nagar, Near Akshardham, Pandav Nagar, Delhi, 110092, India",,,,,28.6126735,77.2772619,,Active,Available,3,0,[; ],GB/T; CCS2; Type 2,AC,pluginany
+,Udyog Vihar Phase V,"814-816, Udyog Vihar Phase V, Udyog Vihar, Phase V, Sector 19, Gurugram, Haryana 122008, India",,,,,28.501231,77.086387,,Active,Available,2,0,"[; ""; 8; ""; ,; ""; 7; ""; ,; ""; 1; ""; ,; ""; 3; ""; ,; ""; 2; ""; ,; ""; 4; ""; ]",,AC,pluginany
+,BPCL EPE,"QCCX+RX6, Eastern Peripheral Expy, Milak/Milk Chakarpur, Uttar Pradesh 201206, India",,,,,28.77232645,77.44936533,,Active,Available,2,0,"[; ""; 4; ""; ,; ""; 3; ""; ]",CCS2,AC,pluginany
+,Radisson Gurgaon Udyog Vihar,"Nh-8, Plot No. 406, Udyog Vihar Phase 3 Rd, Udyog Vihar III, Sector 20, Gurugram, Haryana 122016, India",,,,,28.5097521,77.0922015,,Active,Available,1,0,"[; ""; 1; ""; ,; ""; 2; ""; ,; ""; 3; ""; ,; ""; 5; ""; ,; ""; 7; ""; ]",,AC,pluginany
+,My House,"97289 08957, Barwala, New Delhi, Delhi 110039, India",,,,,28.762329,77.06065,,Active,Available,1,0,"[; ""; 4; ""; ]",Type 2,AC,pluginany
+,"Vatika Town Square II, Sector 82","9XR5+7PG, Lamps Ave, Sector 82, Gurugram, Haryana 122004, India",,,,,28.390518,76.959226,,Active,Available,1,0,[; ],CCS2,AC,pluginany
+,Tyagi IOC Petrol Pump,"3, Panchsheel Colony, Lal Kuan, Ghaziabad, Uttar Pradesh 201009, India",,,,,28.619506,77.483792,,Active,Available,1,0,"[; ""; 4; ""; ]",CCS2,AC,pluginany
+,BPCL charger,"WW3M+CQP, Anandpur, Haryana 131403, India",,,,,28.90347554,76.93399891,,Active,Available,2,0,[; ],CCS2,AC,pluginany
+,Earthtron EV - Community Center Sector 15 Market,"Sector 15 Main market, Sector 15, Faridabad, Haryana 121007, India",,,,,28.39554639,77.32235804,,Active,Available,1,0,[; ],CCS2,AC,pluginany
+,Unknown EV Station,"WP43+CG7, Rohtak - Sonipat Rd, Bhalaut, Haryana 124401, India",,,,,28.905786,76.703907,,Active,Available,1,0,[; ],Type 2,AC,pluginany
+,PetroMart,"C595+J44, Faridabad - Gurgaon Rd, Balola, Gurugram, Delhi 122102, India",,,,,28.41889137,77.1574156,,Active,Available,2,0,"[; ""; 4; ""; ]",CCS2,AC,pluginany
