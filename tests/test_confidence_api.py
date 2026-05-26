@@ -72,11 +72,35 @@ def test_sentiment_and_rating_fallback(monkeypatch) -> None:
     install_fake_reviews(monkeypatch)
     rows = fake_reviews()
 
-    assert service.review_sentiment_score(rows.iloc[0]) == 0.9
-    assert service.review_sentiment_score(rows.iloc[1]) == 0.1
+    assert service.review_sentiment_score(rows.iloc[0]) == 0.88
+    assert service.review_sentiment_score(rows.iloc[1]) == 0.12
     assert service.review_sentiment_score(rows.iloc[2]) == 0.85
     assert service.rating_fallback_score(0) == 0.50
     assert service.rating_fallback_score(-1) == 0.15
+
+
+def test_charger_reliability_scorer_handles_domain_failure_language() -> None:
+    scorer = service.ChargerReliabilityScorer()
+
+    assert scorer.score("Connection issue") <= 0.20
+    assert scorer.score("Charger is currently under maintenance") <= 0.20
+    assert scorer.score("Not working waste") <= 0.20
+    assert scorer.score("Working perfectly") >= 0.80
+    assert 0.40 <= scorer.score("Is this charger available, working?") <= 0.50
+
+
+def test_default_review_score_blends_rating_with_domain_text() -> None:
+    negative_text_positive_rating = pd.Series(
+        {"rating": 1, "comment": "It is offline but Ravi helped"},
+    )
+    positive_text_negative_rating = pd.Series(
+        {"rating": -1, "comment": "Successfully charged after reset"},
+    )
+    missing_comment = pd.Series({"rating": -1, "comment": None})
+
+    assert service.review_sentiment_score(negative_text_positive_rating) < 0.40
+    assert service.review_sentiment_score(positive_text_negative_rating) > 0.55
+    assert service.review_sentiment_score(missing_comment) == 0.15
 
 
 def test_time_decay_gives_newer_reviews_more_weight() -> None:
@@ -120,6 +144,25 @@ def test_rank_accepts_ocpi_and_age_overrides(monkeypatch) -> None:
             "station_ids": ["alpha", "beta"],
             "ocpi_status": {"beta": "UNAVAILABLE"},
             "equipment_age_days": {"beta": 400},
+        },
+    )
+    body = response.json()
+
+    assert response.status_code == 200, body
+    assert body["results"][-1]["station_id"] == "beta"
+    assert body["results"][-1]["ocpi_status"] == "UNAVAILABLE"
+    assert body["results"][-1]["equipment_age_days"] == 400
+
+
+def test_rank_accepts_legacy_override_keys(monkeypatch) -> None:
+    install_fake_reviews(monkeypatch)
+
+    response = client.post(
+        "/api/v1/confidence/rank",
+        json={
+            "station_ids": ["alpha", "beta"],
+            "ocpi_overrides": {"beta": "UNAVAILABLE"},
+            "equipment_age_overrides": {"beta": 400},
         },
     )
     body = response.json()

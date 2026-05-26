@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import math
 import os
+import re
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from functools import lru_cache
@@ -17,6 +18,80 @@ from app.confidence.schemas import ConfidenceResult, ReviewStats
 REVIEWS_PATH = Path(__file__).resolve().parents[2] / "india_ev_reviews.xlsx"
 REVIEWS_SHEET = "india_ev_reviews"
 DECAY_HALF_LIFE_DAYS = 30.0
+NEGATIVE_RELIABILITY_PATTERNS = (
+    r"not reliable",
+    r"not able to charge",
+    r"not working",
+    r"not work",
+    r"not available",
+    r"not operational",
+    r"no charger",
+    r"no power",
+    r"\bbroken\b",
+    r"\bfault\b",
+    r"\bfaulty\b",
+    r"\bfailure\b",
+    r"\bfailed\b",
+    r"\berror\b",
+    r"\boffline\b",
+    r"\bunavailable\b",
+    r"\bblocked\b",
+    r"\bclosed\b",
+    r"could not charge",
+    r"did not allow",
+    r"did not start",
+    r"unable to charge",
+    r"insulation failure",
+    r"out of service",
+    r"out of order",
+    r"under maintenance",
+    r"under repair",
+    r"non functional",
+    r"not functional",
+    r"not found",
+    r"complaint",
+    r"\bworst\b",
+    r"\bscam\b",
+    r"connection issue",
+    r"connection not there",
+    r"not started",
+    r"shut down",
+)
+POSITIVE_RELIABILITY_PATTERNS = (
+    r"working perfectly",
+    r"working fine",
+    r"\bworking\b",
+    r"\bworks\b",
+    r"successfully charged",
+    r"\bcharged\b",
+    r"\bcharging\b",
+    r"\bavailable\b",
+    r"\bgood\b",
+    r"\bgreat\b",
+    r"\bexcellent\b",
+    r"\bsmooth\b",
+    r"\bfast\b",
+    r"\bfine\b",
+    r"\bsuccess",
+    r"\boperational\b",
+    r"\bactive\b",
+    r"nice charger",
+)
+QUESTION_PATTERNS = (
+    r"\?",
+    r"working or not",
+    r"please inform",
+    r"someone please confirm",
+    r"is this .*working",
+    r"is it working",
+)
+RESOLVED_FAILURE_PATTERNS = (
+    r"but.*working",
+    r"today.*working",
+    r"successfully charged",
+    r"reset.*immediately",
+    r"finally.*charged",
+)
 
 
 class StationNotFoundError(LookupError):
@@ -29,7 +104,7 @@ class SentimentScorer(Protocol):
 
 
 class DistilBertSentimentScorer:
-    """Lazy DistilBERT sentiment scorer."""
+    """Lazy generic DistilBERT scorer kept for experiments, not production default."""
 
     def __init__(self) -> None:
         self._pipeline = None
@@ -51,6 +126,35 @@ class DistilBertSentimentScorer:
         if label == "NEGATIVE":
             return 1.0 - model_score
         return model_score
+
+
+class ChargerReliabilityScorer:
+    """Domain scorer for charger reliability comments.
+
+    Generic sentiment models often misread short operational phrases such as
+    "connection issue" or "under maintenance". This scorer maps charger-specific
+    language to reliability probability before station-level aggregation.
+    """
+
+    def score(self, comment: str) -> float:
+        lowered = " ".join(comment.lower().split())
+        if not lowered:
+            return 0.50
+
+        has_question = _matches_any(lowered, QUESTION_PATTERNS)
+        has_negative = _matches_any(lowered, NEGATIVE_RELIABILITY_PATTERNS)
+        has_positive = _matches_any(lowered, POSITIVE_RELIABILITY_PATTERNS)
+        has_resolved_failure = _matches_any(lowered, RESOLVED_FAILURE_PATTERNS)
+
+        if has_question and not has_resolved_failure:
+            return 0.45
+        if has_negative and has_resolved_failure:
+            return 0.62
+        if has_negative:
+            return 0.12
+        if has_positive:
+            return 0.88
+        return 0.50
 
 
 class SyntheticSentimentScorer:
@@ -116,10 +220,10 @@ def load_reviews() -> pd.DataFrame:
 
 
 @lru_cache(maxsize=1)
-def _default_scorer() -> DistilBertSentimentScorer | SyntheticSentimentScorer:
+def _default_scorer() -> ChargerReliabilityScorer | SyntheticSentimentScorer:
     if os.getenv("FASTSIM_SYNTHETIC_DATA") == "1":
         return SyntheticSentimentScorer()
-    return DistilBertSentimentScorer()
+    return ChargerReliabilityScorer()
 
 
 def rating_fallback_score(rating: float | int | None) -> float:
@@ -133,13 +237,35 @@ def rating_fallback_score(rating: float | int | None) -> float:
     return 0.50
 
 
+def _matches_any(text: str, patterns: tuple[str, ...]) -> bool:
+    return any(re.search(pattern, text) for pattern in patterns)
+
+
+def blend_text_and_rating_score(text_score: float, rating_score: float) -> float:
+    """Combine domain text signal with explicit review rating.
+
+    The review rating is generally reliable at scale, but concrete charger
+    failure phrases are stronger than generic positive/negative labels.
+    """
+    if rating_score == 0.50:
+        return text_score
+    if text_score <= 0.40 and rating_score >= 0.60:
+        return 0.70 * text_score + 0.30 * rating_score
+    if text_score >= 0.60 and rating_score <= 0.40:
+        return 0.65 * text_score + 0.35 * rating_score
+    return 0.60 * text_score + 0.40 * rating_score
+
+
 def review_sentiment_score(row: pd.Series, scorer: SentimentScorer | None = None) -> float:
-    """Return transformer sentiment score, falling back to rating when comments are missing."""
+    """Return charger reliability sentiment, falling back to rating when comments are missing."""
     comment = row.get("comment")
+    rating_score = rating_fallback_score(row.get("rating"))
     if isinstance(comment, str) and comment.strip():
-        active_scorer = scorer or _default_scorer()
-        return float(active_scorer.score(comment.strip()))
-    return rating_fallback_score(row.get("rating"))
+        if scorer is not None:
+            return float(scorer.score(comment.strip()))
+        text_score = float(_default_scorer().score(comment.strip()))
+        return round(blend_text_and_rating_score(text_score, rating_score), 6)
+    return rating_score
 
 
 def decay_weight(review_date: pd.Timestamp | None, now: datetime | None = None) -> float:

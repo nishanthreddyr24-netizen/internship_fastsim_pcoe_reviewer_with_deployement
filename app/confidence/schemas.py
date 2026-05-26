@@ -1,6 +1,8 @@
 """Schemas for charger confidence scoring."""
 
-from pydantic import AliasChoices, BaseModel, ConfigDict, Field
+from typing import Any
+
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class StationMetadata(BaseModel):
@@ -35,14 +37,20 @@ class RankConfidenceRequest(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
 
     station_ids: list[str | int] = Field(min_length=1)
-    ocpi_status: dict[str, str] = Field(
-        default_factory=dict,
-        validation_alias=AliasChoices("ocpi_status", "ocpi_overrides"),
-    )
-    equipment_age_days: dict[str, int] = Field(
-        default_factory=dict,
-        validation_alias=AliasChoices("equipment_age_days", "equipment_age_overrides"),
-    )
+    ocpi_status: dict[str, str] = Field(default_factory=dict)
+    equipment_age_days: dict[str, int] = Field(default_factory=dict)
+
+    @model_validator(mode="before")
+    @classmethod
+    def accept_legacy_override_keys(cls, data: Any) -> Any:
+        if not isinstance(data, dict):
+            return data
+        normalized = dict(data)
+        if "ocpi_status" not in normalized and "ocpi_overrides" in normalized:
+            normalized["ocpi_status"] = normalized["ocpi_overrides"]
+        if "equipment_age_days" not in normalized and "equipment_age_overrides" in normalized:
+            normalized["equipment_age_days"] = normalized["equipment_age_overrides"]
+        return normalized
 
 
 class RankedConfidenceResponse(BaseModel):
