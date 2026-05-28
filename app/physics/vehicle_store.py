@@ -1,5 +1,6 @@
 """Vehicle enrichment CSV lookup and normalization."""
 
+import logging
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -9,6 +10,8 @@ import pandas as pd
 from app.physics.schemas import VehicleProfile
 
 DATASET_PATH = Path(__file__).resolve().parents[2] / "vehicles_enrichment_GLOBAL_20260517_0915.csv"
+SAFE_DEFAULT_RR_COEF = 0.012
+logger = logging.getLogger(__name__)
 
 
 class VehicleNotFoundError(LookupError):
@@ -46,6 +49,15 @@ def profile_from_dataset(vehicle_id: str) -> VehicleProfile:
 
     row = matches.iloc[0]
     year = _clean_number(row.get("Year From *"))
+    wheel_rr_coef = _clean_number(row.get("Roll Cr"))
+    if wheel_rr_coef is None:
+        logger.warning(
+            "vehicle_id '%s' is missing Roll Cr; falling back to %.3f",
+            vehicle_id,
+            SAFE_DEFAULT_RR_COEF,
+        )
+        wheel_rr_coef = SAFE_DEFAULT_RR_COEF
+
     return VehicleProfile(
         vehicle_id=str(row["Vehicle ID"]),
         make=_clean_text(row.get("Brand *")),
@@ -58,7 +70,7 @@ def profile_from_dataset(vehicle_id: str) -> VehicleProfile:
         maxMotorKw=_clean_number(row.get("Motor kW")),
         dragCoef=_clean_number(row.get("Drag Cd *")),
         frontalAreaM2=_clean_number(row.get("Frontal A m2 *")),
-        wheelRrCoef=_clean_number(row.get("Roll Cr")),
+        wheelRrCoef=wheel_rr_coef,
         drivetrainEff=_clean_number(row.get("Drivetrain eff")),
     )
 
@@ -81,4 +93,3 @@ def resolve_vehicle_profile(
         if value is not None:
             merged[key] = value
     return VehicleProfile(**merged)
-

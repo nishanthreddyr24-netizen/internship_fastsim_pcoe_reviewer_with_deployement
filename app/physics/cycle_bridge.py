@@ -3,8 +3,9 @@
 import math
 from typing import Any
 
+from app.physics.environment import edge_wind_direction, effective_aero_speed_kph
 from app.physics.fastsim_bridge import import_fastsim
-from app.physics.schemas import Coordinate, RouteEdge
+from app.physics.schemas import Coordinate, Environment, RouteEdge
 
 fsim = import_fastsim()
 
@@ -30,6 +31,7 @@ def _interpolate_coordinate(edge: RouteEdge, fraction: float) -> Coordinate:
 def valhalla_to_1hz_cycle(
     edges: list[RouteEdge],
     ambient_temp_c: float,
+    environment: Environment | None = None,
 ) -> tuple[Any, dict[int, Coordinate]]:
     """Expand route edges to a one-second FASTSim cycle and second-coordinate map."""
     time_seconds = [0.0]
@@ -42,14 +44,23 @@ def valhalla_to_1hz_cycle(
     current_time = 0
 
     for edge in edges:
-        v_mps = max(edge.speed_kph / 3.6, 0.5)
-        duration = max(1, int(round(edge.distance_m / v_mps)))
+        ground_v_mps = max(edge.speed_kph / 3.6, 0.5)
+        cycle_speed_kph = edge.speed_kph
+        if environment is not None:
+            cycle_speed_kph = effective_aero_speed_kph(
+                edge.speed_kph,
+                edge.heading_deg,
+                environment.wind_speed_kph,
+                edge_wind_direction(edge, environment),
+            )
+        cycle_v_mps = max(cycle_speed_kph / 3.6, 0.0)
+        duration = max(1, int(round(edge.distance_m / ground_v_mps)))
         grade_ratio = edge.grade_pct / 100.0
 
         for step in range(1, duration + 1):
             current_time += 1
             time_seconds.append(float(current_time))
-            speed_mps.append(v_mps)
+            speed_mps.append(cycle_v_mps)
             grade.append(grade_ratio)
             pwr_max_chrg_watts.append(0.0)
             temp_amb_air_kelvin.append(ambient_temp_c + 273.15)

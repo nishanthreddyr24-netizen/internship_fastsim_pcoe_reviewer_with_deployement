@@ -9,6 +9,13 @@ import numpy as np
 
 from app.physics.battery import BatteryCorrection, battery_correction
 from app.physics.cycle_bridge import route_distance_m, valhalla_to_1hz_cycle
+from app.physics.environment import (
+    adjusted_rolling_resistance,
+    edge_wind_direction,
+    effective_aero_speed_kph,
+    request_hvac_power_kw,
+    request_rr_override,
+)
 from app.physics.fastsim_bridge import import_fastsim
 from app.physics.schemas import (
     Coordinate,
@@ -47,6 +54,8 @@ def _usable_kwh(profile: VehicleProfile) -> float:
 def build_fastsim_vehicle(
     profile: VehicleProfile,
     ambient_temp_c: float = 25.0,
+    adjusted_rr_coef: float | None = None,
+    hvac_power_kw: float = 0.0,
 ) -> tuple[Any, VehicleSummary, BatteryCorrection]:
     """Patch a BEV FASTSim template with enrichment-dataset vehicle values."""
     if fsim is None:
@@ -59,7 +68,8 @@ def build_fastsim_vehicle(
     max_motor_kw = _required_float(profile, "max_motor_kw")
     drag_coef = _required_float(profile, "drag_coef")
     frontal_area_m2 = _required_float(profile, "frontal_area_m2")
-    wheel_rr_coef = float(profile.wheel_rr_coef or 0.008)
+    base_wheel_rr_coef = float(profile.wheel_rr_coef or 0.012)
+    wheel_rr_coef = adjusted_rr_coef or base_wheel_rr_coef
 
     template = fsim.Vehicle.from_resource(BEV_TEMPLATE)
     data = template.to_pydict(data_fmt="yaml")
@@ -69,6 +79,7 @@ def build_fastsim_vehicle(
     data["chassis"]["drag_coef"] = drag_coef
     data["chassis"]["frontal_area_square_meters"] = frontal_area_m2
     data["chassis"]["wheel_rr_coef"] = wheel_rr_coef
+    data["pwr_aux_base_watts"] = hvac_power_kw * 1000.0
     bev["em"]["pwr_out_max_watts"] = max_motor_kw * 1000.0
     bev["res"]["energy_capacity_joules"] = effective_kwh * JOULES_PER_KWH
     bev["res"]["pwr_out_max_watts"] = max(bev["res"]["pwr_out_max_watts"], max_motor_kw * 1500.0)
@@ -90,6 +101,8 @@ def build_fastsim_vehicle(
         drag_coef=drag_coef,
         frontal_area_m2=frontal_area_m2,
         wheel_rr_coef=wheel_rr_coef,
+        base_wheel_rr_coef=base_wheel_rr_coef,
+        hvac_power_kw=hvac_power_kw,
     ), correction
 
 
@@ -131,12 +144,38 @@ def _history_energy(sim_drive: fsim.SimDrive) -> list[float]:
     return values
 
 
+def _environmental_inputs_active(request: SimulateRequest) -> bool:
+    state = request.vehicle_state
+    return any(
+        [
+            request.environment.wind_speed_kph > 0.0,
+            request.environment.precipitation_mm > 0.0,
+            state is not None and state.hvac_power_kw is not None,
+            state is not None and state.adjusted_rr_coef is not None,
+        ],
+    )
+
+
+def _max_energy_history(primary: list[float], conservative: list[float]) -> list[float]:
+    """Use the conservative bridge estimate when upgraded env features exceed FASTSim drain."""
+    length = max(len(primary), len(conservative))
+    merged: list[float] = []
+    for idx in range(length):
+        primary_value = primary[idx] if idx < len(primary) else primary[-1]
+        conservative_value = conservative[idx] if idx < len(conservative) else conservative[-1]
+        merged.append(max(primary_value, conservative_value))
+    return merged
+
+
 def _vehicle_summary_from_profile(
     profile: VehicleProfile,
     ambient_temp_c: float,
+    adjusted_rr_coef: float | None = None,
+    hvac_power_kw: float = 0.0,
 ) -> tuple[VehicleSummary, BatteryCorrection]:
     usable_kwh = _usable_kwh(profile)
     correction = battery_correction(usable_kwh, profile.state_of_health, ambient_temp_c)
+    base_wheel_rr_coef = float(profile.wheel_rr_coef or 0.012)
     return VehicleSummary(
         vehicle_id=profile.vehicle_id,
         make=profile.make,
@@ -148,7 +187,9 @@ def _vehicle_summary_from_profile(
         max_motor_kw=_required_float(profile, "max_motor_kw"),
         drag_coef=_required_float(profile, "drag_coef"),
         frontal_area_m2=_required_float(profile, "frontal_area_m2"),
-        wheel_rr_coef=float(profile.wheel_rr_coef or 0.008),
+        wheel_rr_coef=adjusted_rr_coef or base_wheel_rr_coef,
+        base_wheel_rr_coef=base_wheel_rr_coef,
+        hvac_power_kw=hvac_power_kw,
     ), correction
 
 
@@ -167,10 +208,18 @@ def _synthetic_energy_history(
     gravity = 9.80665
     drivetrain_eff = 0.88
     regen_eff = 0.55
-    aux_watts = 450.0 + max(0.0, abs(request.environment.ambient_temp_c - 22.0) - 3.0) * 35.0
+    aux_watts = summary.hvac_power_kw * 1000.0
 
     for edge in request.route_edges:
-        v_mps = max(edge.speed_kph / 3.6, 0.5)
+        ground_v_mps = max(edge.speed_kph / 3.6, 0.5)
+        aero_speed_kph = effective_aero_speed_kph(
+            edge.speed_kph,
+            edge.heading_deg,
+            request.environment.wind_speed_kph,
+            edge_wind_direction(edge, request.environment),
+        )
+        aero_v_mps = max(aero_speed_kph / 3.6, 0.0)
+        v_mps = ground_v_mps
         duration = max(1, int(round(edge.distance_m / v_mps)))
         grade_ratio = edge.grade_pct / 100.0
         rolling_watts = summary.mass_kg * gravity * summary.wheel_rr_coef * v_mps
@@ -179,7 +228,7 @@ def _synthetic_energy_history(
             * air_density
             * summary.drag_coef
             * summary.frontal_area_m2
-            * v_mps**3
+            * aero_v_mps**3
         )
         grade_watts = summary.mass_kg * gravity * grade_ratio * v_mps
         tractive_watts = rolling_watts + aero_watts + grade_watts + aux_watts
@@ -199,9 +248,17 @@ def _simulate_route_synthetic(
     request: SimulateRequest,
     profile: VehicleProfile,
 ) -> SimulateResponse:
+    hvac_power_kw = request_hvac_power_kw(request.environment, request.vehicle_state)
+    rr_coef = adjusted_rolling_resistance(
+        profile.wheel_rr_coef,
+        request.environment.precipitation_mm,
+        request_rr_override(request.vehicle_state),
+    )
     summary, correction = _vehicle_summary_from_profile(
         profile,
         request.environment.ambient_temp_c,
+        adjusted_rr_coef=rr_coef,
+        hvac_power_kw=hvac_power_kw,
     )
     energy_out_joules, coord_map = _synthetic_energy_history(request, summary)
     soc_timeline = _soc_timeline_from_energy(
@@ -240,13 +297,22 @@ def simulate_route(request: SimulateRequest) -> SimulateResponse:
     if fsim is None:
         return _simulate_route_synthetic(request, profile)
 
+    hvac_power_kw = request_hvac_power_kw(request.environment, request.vehicle_state)
+    rr_coef = adjusted_rolling_resistance(
+        profile.wheel_rr_coef,
+        request.environment.precipitation_mm,
+        request_rr_override(request.vehicle_state),
+    )
     vehicle, summary, correction = build_fastsim_vehicle(
         profile,
         request.environment.ambient_temp_c,
+        adjusted_rr_coef=rr_coef,
+        hvac_power_kw=hvac_power_kw,
     )
     cycle, coord_map = valhalla_to_1hz_cycle(
         request.route_edges,
         request.environment.ambient_temp_c,
+        request.environment,
     )
 
     sim_drive = fsim.SimDrive(vehicle, cycle, _sim_params())
@@ -258,10 +324,15 @@ def simulate_route(request: SimulateRequest) -> SimulateResponse:
         # completed history up to that second is still the signal the router needs.
         pass
 
+    energy_history = _history_energy(sim_drive)
+    if _environmental_inputs_active(request):
+        conservative_energy_history, _ = _synthetic_energy_history(request, summary)
+        energy_history = _max_energy_history(energy_history, conservative_energy_history)
+
     soc_timeline = _soc_timeline_from_energy(
         request.starting_soc,
         summary.effective_kwh,
-        _history_energy(sim_drive),
+        energy_history,
     )
     status, depletion_second, depletion_coordinate = _depletion(
         soc_timeline,

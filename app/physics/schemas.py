@@ -2,7 +2,7 @@
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from app.physics.battery import BatteryCorrection
 
@@ -17,6 +17,8 @@ class RouteEdge(BaseModel):
     distance_m: float = Field(gt=0.0)
     speed_kph: float = Field(ge=0.0)
     grade_pct: float = 0.0
+    heading_deg: float | None = Field(default=None, ge=0.0, le=360.0)
+    wind_direction_deg: float | None = Field(default=None, ge=0.0, le=360.0)
     start_coordinate: Coordinate
     end_coordinate: Coordinate | None = None
 
@@ -72,6 +74,16 @@ class CustomEVProfile(BaseModel):
 
 class Environment(BaseModel):
     ambient_temp_c: float = 25.0
+    wind_speed_kph: float = Field(default=0.0, ge=0.0)
+    wind_direction_deg: float = Field(default=0.0, ge=0.0, le=360.0)
+    precipitation_mm: float = Field(default=0.0, ge=0.0)
+
+
+class VehicleState(BaseModel):
+    starting_soc: float | None = Field(default=None, gt=0.0, le=1.0)
+    protection_soc: float | None = Field(default=None, ge=0.0, lt=1.0)
+    hvac_power_kw: float | None = Field(default=None, ge=0.0)
+    adjusted_rr_coef: float | None = Field(default=None, gt=0.0)
 
 
 class SimulateRequest(BaseModel):
@@ -79,9 +91,27 @@ class SimulateRequest(BaseModel):
     vehicle_profile: VehicleProfile | None = None
     custom_ev_profile: CustomEVProfile | None = None
     environment: Environment = Field(default_factory=Environment)
+    vehicle_state: VehicleState | None = None
     route_edges: list[RouteEdge] = Field(min_length=1)
-    starting_soc: float = Field(gt=0.0, le=1.0)
-    protection_soc: float = Field(default=0.10, ge=0.0, lt=1.0)
+    starting_soc: float | None = Field(default=None, gt=0.0, le=1.0)
+    protection_soc: float | None = Field(default=None, ge=0.0, lt=1.0)
+
+    @model_validator(mode="after")
+    def resolve_vehicle_state(self) -> "SimulateRequest":
+        """Allow the upgraded nested vehicle_state contract and the legacy top-level fields."""
+        if self.vehicle_state is not None:
+            if self.starting_soc is None:
+                self.starting_soc = self.vehicle_state.starting_soc
+            if self.protection_soc is None:
+                self.protection_soc = self.vehicle_state.protection_soc
+
+        if self.starting_soc is None:
+            raise ValueError("starting_soc or vehicle_state.starting_soc is required")
+        if self.protection_soc is None:
+            self.protection_soc = 0.10
+        if self.protection_soc >= self.starting_soc:
+            raise ValueError("protection_soc must be below starting_soc")
+        return self
 
 
 class VehicleSummary(BaseModel):
@@ -96,6 +126,8 @@ class VehicleSummary(BaseModel):
     drag_coef: float
     frontal_area_m2: float
     wheel_rr_coef: float
+    base_wheel_rr_coef: float | None = None
+    hvac_power_kw: float = 0.0
 
 
 class SimulateResponse(BaseModel):

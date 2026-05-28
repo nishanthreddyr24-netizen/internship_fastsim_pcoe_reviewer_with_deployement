@@ -343,18 +343,48 @@ The simulation endpoint accepts:
 }
 ```
 
+## PluginAny Routing Integration
+
+The upgraded PluginAny protocol is implemented as an offline-first integration test path for route physics, weather inputs, Valhalla-style route edges, and vehicle database properties.
+
+New simulation request fields:
+
+- `environment.wind_speed_kph`
+- `environment.wind_direction_deg`
+- `environment.precipitation_mm`
+- `route_edges[].heading_deg`
+- `route_edges[].wind_direction_deg`
+- `vehicle_state.starting_soc`
+- `vehicle_state.protection_soc`
+- `vehicle_state.hvac_power_kw`
+- `vehicle_state.adjusted_rr_coef`
+
+The endpoint remains backward compatible with top-level `starting_soc` and `protection_soc`.
+
+Current offline behavior:
+
+- Route validation uses `route_edges.json` as the local Valhalla-style fixture.
+- Weather tests use synthetic or mocked weather data; live weather calls are optional and use a configurable API key.
+- FASTSim is loaded from the local repo package in `python/fastsim`.
+- Missing vehicle rolling resistance falls back to `0.012` and logs a backend warning.
+- Heavy rain above `2.0 mm/hr` applies the default wet-road rolling resistance multiplier of `1.15`.
+- HVAC load is estimated from ambient temperature or taken from `vehicle_state.hvac_power_kw`.
+- Headwind drag uses edge heading and wind direction instead of simply adding wind speed to vehicle speed.
+
+The PDF worst-case payload now returns `200 OK` with `status: depletion_triggered` under local FASTSim plus the conservative environmental bridge adjustment.
+
 ## Running Tests
 
 Focused app tests:
 
 ```bash
-python -m pytest tests/test_confidence_api.py tests/test_battery_correction.py tests/test_physics_api.py tests/test_synthetic_endpoint_smoke.py -q
+python -m pytest tests -q
 ```
 
 At the time this README was written, those tests passed locally:
 
 ```text
-21 passed
+30 passed
 ```
 
 ## Validation Notes
