@@ -134,6 +134,53 @@ def test_weather_wrapper_normalizes_units_and_falls_back() -> None:
     assert result.environment.ambient_temp_c == 25.0
 
 
+def test_weather_wrapper_normalizes_openweather_payload() -> None:
+    env = normalize_weather_payload(
+        {
+            "main": {"temp": 29.4},
+            "wind": {"speed": 4.2, "deg": 260.0},
+            "rain": {"1h": 2.4},
+        },
+    )
+
+    assert env.ambient_temp_c == 29.4
+    assert env.wind_speed_kph == pytest.approx(15.12)
+    assert env.wind_direction_deg == 260.0
+    assert env.precipitation_mm == 2.4
+
+
+def test_weatherapi_url_uses_key_and_coordinate_query() -> None:
+    captured = {}
+
+    def fake_fetcher(url: str, timeout_s: float) -> dict:
+        captured["url"] = url
+        captured["timeout_s"] = timeout_s
+        return {
+            "current": {
+                "temp_c": 39.4,
+                "wind_kph": 19.4,
+                "wind_degree": 260.0,
+                "precip_mm": 0.0,
+            },
+        }
+
+    result = fetch_weather(
+        28.57,
+        77.05,
+        base_url="https://api.weatherapi.com/v1/current.json",
+        api_key="test-key",
+        timeout_s=1.5,
+        fetcher=fake_fetcher,
+    )
+
+    assert result.degraded is False
+    assert "key=test-key" in captured["url"]
+    assert "q=28.57%2C77.05" in captured["url"]
+    assert "aqi=no" in captured["url"]
+    assert captured["timeout_s"] == 1.5
+    assert result.environment.ambient_temp_c == 39.4
+
+
 def test_offline_valhalla_route_fixture_validates_edges() -> None:
     payload = json.loads((ROOT / "route_edges.json").read_text())
     edges = route_edges_from_valhalla_payload(payload)

@@ -6,6 +6,7 @@ import json
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
+from urllib.parse import quote
 from urllib.error import URLError
 from urllib.request import urlopen
 
@@ -25,21 +26,39 @@ class WeatherResult:
 def normalize_weather_payload(payload: dict) -> Environment:
     """Normalize common provider payload keys into the simulation environment schema."""
     current = payload.get("current") if isinstance(payload.get("current"), dict) else payload
+    main = current.get("main") if isinstance(current.get("main"), dict) else {}
+    wind = current.get("wind") if isinstance(current.get("wind"), dict) else {}
+    rain = current.get("rain") if isinstance(current.get("rain"), dict) else {}
+    snow = current.get("snow") if isinstance(current.get("snow"), dict) else {}
+    wind_speed = current.get(
+        "wind_speed_kph",
+        current.get("wind_speed_10m", current.get("wind_kph")),
+    )
+    if wind_speed is None and wind.get("speed") is not None:
+        wind_speed = float(wind["speed"]) * 3.6
+
     return Environment(
         ambient_temp_c=float(
-            current.get("ambient_temp_c", current.get("temperature_2m", current.get("temp_c", 25.0))),
+            current.get(
+                "ambient_temp_c",
+                current.get("temperature_2m", current.get("temp_c", main.get("temp", 25.0))),
+            ),
         ),
-        wind_speed_kph=float(
-            current.get("wind_speed_kph", current.get("wind_speed_10m", current.get("wind_kph", 0.0))),
-        ),
+        wind_speed_kph=float(wind_speed or 0.0),
         wind_direction_deg=float(
             current.get(
                 "wind_direction_deg",
-                current.get("wind_direction_10m", current.get("wind_degree", 0.0)),
+                current.get("wind_direction_10m", current.get("wind_degree", wind.get("deg", 0.0))),
             ),
         ),
         precipitation_mm=float(
-            current.get("precipitation_mm", current.get("precipitation", current.get("precip_mm", 0.0))),
+            current.get(
+                "precipitation_mm",
+                current.get(
+                    "precipitation",
+                    current.get("precip_mm", rain.get("1h", rain.get("3h", snow.get("1h", snow.get("3h", 0.0))))),
+                ),
+            ),
         ),
     )
 
@@ -64,8 +83,13 @@ def fetch_weather(
         return WeatherResult(environment=DEFAULT_WEATHER, elapsed_ms=elapsed_ms, degraded=True)
 
     separator = "&" if "?" in base_url else "?"
-    key_param = f"&appid={api_key}" if api_key else ""
-    url = f"{base_url}{separator}lat={lat}&lon={lon}{key_param}"
+    if "weatherapi.com" in base_url:
+        key_param = f"{separator}key={api_key}" if api_key else ""
+        query_separator = "&" if key_param else separator
+        url = f"{base_url}{key_param}{query_separator}q={quote(f'{lat},{lon}')}&aqi=no"
+    else:
+        key_param = f"&appid={api_key}" if api_key else ""
+        url = f"{base_url}{separator}lat={lat}&lon={lon}{key_param}"
     provider_fetcher = fetcher or _default_fetcher
 
     try:

@@ -364,7 +364,7 @@ The endpoint remains backward compatible with top-level `starting_soc` and `prot
 Current offline behavior:
 
 - Route validation uses `route_edges.json` as the local Valhalla-style fixture.
-- Weather tests use synthetic or mocked weather data; live weather calls are optional and use a configurable API key.
+- Weather tests use synthetic or mocked weather data; live WeatherAPI.com calls are optional and use a configurable API key.
 - FASTSim is loaded from the local repo package in `python/fastsim`.
 - Missing vehicle rolling resistance falls back to `0.012` and logs a backend warning.
 - Heavy rain above `2.0 mm/hr` applies the default wet-road rolling resistance multiplier of `1.15`.
