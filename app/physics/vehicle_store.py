@@ -1,6 +1,7 @@
 """Vehicle enrichment CSV lookup and normalization."""
 
 import logging
+import os
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -9,7 +10,12 @@ import pandas as pd
 
 from app.physics.schemas import VehicleProfile
 
-DATASET_PATH = Path(__file__).resolve().parents[2] / "vehicles_enrichment_GLOBAL_20260517_0915.csv"
+DATASET_PATH = Path(
+    os.getenv(
+        "VEHICLE_ENRICHMENT_PATH",
+        str(Path(__file__).resolve().parents[2] / "vehicles_enrichment_GLOBAL_20260517_0915.csv"),
+    ),
+)
 SAFE_DEFAULT_RR_COEF = 0.012
 logger = logging.getLogger(__name__)
 

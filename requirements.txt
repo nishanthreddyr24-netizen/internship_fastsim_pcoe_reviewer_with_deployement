@@ -1,0 +1,10 @@
+fastapi>=0.136,<1
+uvicorn>=0.47,<1
+gunicorn>=21.2,<24
+pydantic>=2.3,<3
+pandas>=2.1.2,<=2.3.2
+numpy>=1.18,<=2.3.2
+openpyxl>=3.1,<4
+polars~=1.4
+PyYAML==6.0.2
+msgpack==1.1.0

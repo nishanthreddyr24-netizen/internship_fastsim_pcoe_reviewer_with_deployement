@@ -15,7 +15,12 @@ import pandas as pd
 
 from app.confidence.schemas import ConfidenceResult, ReviewStats
 
-REVIEWS_PATH = Path(__file__).resolve().parents[2] / "india_ev_reviews.xlsx"
+REVIEWS_PATH = Path(
+    os.getenv(
+        "INDIA_EV_REVIEWS_PATH",
+        str(Path(__file__).resolve().parents[2] / "india_ev_reviews.xlsx"),
+    ),
+)
 REVIEWS_SHEET = "india_ev_reviews"
 DECAY_HALF_LIFE_DAYS = 30.0
 NEGATIVE_RELIABILITY_PATTERNS = (
