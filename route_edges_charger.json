@@ -1,0 +1,3126 @@
+{
+  "route_edges": [
+    {
+      "edge_index": 0,
+      "distance_m": 36.0,
+      "speed_kph": 43,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.597865,
+        "lon": 77.032466
+      },
+      "end_coordinate": {
+        "lat": 28.597741,
+        "lon": 77.032173
+      }
+    },
+    {
+      "edge_index": 1,
+      "distance_m": 25.0,
+      "speed_kph": 43,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.597741,
+        "lon": 77.032173
+      },
+      "end_coordinate": {
+        "lat": 28.597826,
+        "lon": 77.031936
+      }
+    },
+    {
+      "edge_index": 2,
+      "distance_m": 39.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.597826,
+        "lon": 77.031936
+      },
+      "end_coordinate": {
+        "lat": 28.598038,
+        "lon": 77.031619
+      }
+    },
+    {
+      "edge_index": 3,
+      "distance_m": 21.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.598038,
+        "lon": 77.031619
+      },
+      "end_coordinate": {
+        "lat": 28.598151,
+        "lon": 77.031446
+      }
+    },
+    {
+      "edge_index": 4,
+      "distance_m": 197.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.598151,
+        "lon": 77.031446
+      },
+      "end_coordinate": {
+        "lat": 28.599252,
+        "lon": 77.029917
+      }
+    },
+    {
+      "edge_index": 5,
+      "distance_m": 13.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.599252,
+        "lon": 77.029917
+      },
+      "end_coordinate": {
+        "lat": 28.599231,
+        "lon": 77.029784
+      }
+    },
+    {
+      "edge_index": 6,
+      "distance_m": 136.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.599231,
+        "lon": 77.029784
+      },
+      "end_coordinate": {
+        "lat": 28.598335,
+        "lon": 77.028897
+      }
+    },
+    {
+      "edge_index": 7,
+      "distance_m": 19.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.598335,
+        "lon": 77.028897
+      },
+      "end_coordinate": {
+        "lat": 28.598199,
+        "lon": 77.028778
+      }
+    },
+    {
+      "edge_index": 8,
+      "distance_m": 18.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.598199,
+        "lon": 77.028778
+      },
+      "end_coordinate": {
+        "lat": 28.598068,
+        "lon": 77.02867
+      }
+    },
+    {
+      "edge_index": 9,
+      "distance_m": 82.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.598068,
+        "lon": 77.02867
+      },
+      "end_coordinate": {
+        "lat": 28.597473,
+        "lon": 77.028173
+      }
+    },
+    {
+      "edge_index": 10,
+      "distance_m": 68.0,
+      "speed_kph": 75,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.597473,
+        "lon": 77.028173
+      },
+      "end_coordinate": {
+        "lat": 28.596869,
+        "lon": 77.028265
+      }
+    },
+    {
+      "edge_index": 11,
+      "distance_m": 370.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.596869,
+        "lon": 77.028265
+      },
+      "end_coordinate": {
+        "lat": 28.59485,
+        "lon": 77.031277
+      }
+    },
+    {
+      "edge_index": 12,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.59485,
+        "lon": 77.031277
+      },
+      "end_coordinate": {
+        "lat": 28.594793,
+        "lon": 77.031363
+      }
+    },
+    {
+      "edge_index": 13,
+      "distance_m": 242.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.594793,
+        "lon": 77.031363
+      },
+      "end_coordinate": {
+        "lat": 28.59347,
+        "lon": 77.033331
+      }
+    },
+    {
+      "edge_index": 14,
+      "distance_m": 73.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.59347,
+        "lon": 77.033331
+      },
+      "end_coordinate": {
+        "lat": 28.593073,
+        "lon": 77.033921
+      }
+    },
+    {
+      "edge_index": 15,
+      "distance_m": 63.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.593073,
+        "lon": 77.033921
+      },
+      "end_coordinate": {
+        "lat": 28.59273,
+        "lon": 77.034431
+      }
+    },
+    {
+      "edge_index": 16,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.59273,
+        "lon": 77.034431
+      },
+      "end_coordinate": {
+        "lat": 28.59267,
+        "lon": 77.034527
+      }
+    },
+    {
+      "edge_index": 17,
+      "distance_m": 9.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.59267,
+        "lon": 77.034527
+      },
+      "end_coordinate": {
+        "lat": 28.592604,
+        "lon": 77.034469
+      }
+    },
+    {
+      "edge_index": 18,
+      "distance_m": 55.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.592604,
+        "lon": 77.034469
+      },
+      "end_coordinate": {
+        "lat": 28.592207,
+        "lon": 77.034136
+      }
+    },
+    {
+      "edge_index": 19,
+      "distance_m": 220.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.592207,
+        "lon": 77.034136
+      },
+      "end_coordinate": {
+        "lat": 28.590614,
+        "lon": 77.0328
+      }
+    },
+    {
+      "edge_index": 20,
+      "distance_m": 159.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.590614,
+        "lon": 77.0328
+      },
+      "end_coordinate": {
+        "lat": 28.589465,
+        "lon": 77.031836
+      }
+    },
+    {
+      "edge_index": 21,
+      "distance_m": 164.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.589465,
+        "lon": 77.031836
+      },
+      "end_coordinate": {
+        "lat": 28.588277,
+        "lon": 77.03084
+      }
+    },
+    {
+      "edge_index": 22,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.588277,
+        "lon": 77.03084
+      },
+      "end_coordinate": {
+        "lat": 28.588197,
+        "lon": 77.030771
+      }
+    },
+    {
+      "edge_index": 23,
+      "distance_m": 311.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.588197,
+        "lon": 77.030771
+      },
+      "end_coordinate": {
+        "lat": 28.585958,
+        "lon": 77.028871
+      }
+    },
+    {
+      "edge_index": 24,
+      "distance_m": 23.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.585958,
+        "lon": 77.028871
+      },
+      "end_coordinate": {
+        "lat": 28.58579,
+        "lon": 77.028736
+      }
+    },
+    {
+      "edge_index": 25,
+      "distance_m": 8.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.58579,
+        "lon": 77.028736
+      },
+      "end_coordinate": {
+        "lat": 28.585746,
+        "lon": 77.028806
+      }
+    },
+    {
+      "edge_index": 26,
+      "distance_m": 457.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.585746,
+        "lon": 77.028806
+      },
+      "end_coordinate": {
+        "lat": 28.583905,
+        "lon": 77.032976
+      }
+    },
+    {
+      "edge_index": 27,
+      "distance_m": 359.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.583905,
+        "lon": 77.032976
+      },
+      "end_coordinate": {
+        "lat": 28.583346,
+        "lon": 77.036584
+      }
+    },
+    {
+      "edge_index": 28,
+      "distance_m": 99.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.583346,
+        "lon": 77.036584
+      },
+      "end_coordinate": {
+        "lat": 28.583245,
+        "lon": 77.037595
+      }
+    },
+    {
+      "edge_index": 29,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.583245,
+        "lon": 77.037595
+      },
+      "end_coordinate": {
+        "lat": 28.583199,
+        "lon": 77.037689
+      }
+    },
+    {
+      "edge_index": 30,
+      "distance_m": 263.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.583199,
+        "lon": 77.037689
+      },
+      "end_coordinate": {
+        "lat": 28.58227,
+        "lon": 77.040085
+      }
+    },
+    {
+      "edge_index": 31,
+      "distance_m": 34.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.58227,
+        "lon": 77.040085
+      },
+      "end_coordinate": {
+        "lat": 28.58221,
+        "lon": 77.040427
+      }
+    },
+    {
+      "edge_index": 32,
+      "distance_m": 208.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.58221,
+        "lon": 77.040427
+      },
+      "end_coordinate": {
+        "lat": 28.580718,
+        "lon": 77.04128
+      }
+    },
+    {
+      "edge_index": 33,
+      "distance_m": 378.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.580718,
+        "lon": 77.04128
+      },
+      "end_coordinate": {
+        "lat": 28.577322,
+        "lon": 77.04118
+      }
+    },
+    {
+      "edge_index": 34,
+      "distance_m": 170.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.577322,
+        "lon": 77.04118
+      },
+      "end_coordinate": {
+        "lat": 28.575807,
+        "lon": 77.040982
+      }
+    },
+    {
+      "edge_index": 35,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.575807,
+        "lon": 77.040982
+      },
+      "end_coordinate": {
+        "lat": 28.575711,
+        "lon": 77.040969
+      }
+    },
+    {
+      "edge_index": 36,
+      "distance_m": 161.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.575711,
+        "lon": 77.040969
+      },
+      "end_coordinate": {
+        "lat": 28.574274,
+        "lon": 77.040787
+      }
+    },
+    {
+      "edge_index": 37,
+      "distance_m": 130.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.574274,
+        "lon": 77.040787
+      },
+      "end_coordinate": {
+        "lat": 28.573109,
+        "lon": 77.040638
+      }
+    },
+    {
+      "edge_index": 38,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.573109,
+        "lon": 77.040638
+      },
+      "end_coordinate": {
+        "lat": 28.573013,
+        "lon": 77.040621
+      }
+    },
+    {
+      "edge_index": 39,
+      "distance_m": 647.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.573013,
+        "lon": 77.040621
+      },
+      "end_coordinate": {
+        "lat": 28.567235,
+        "lon": 77.0399
+      }
+    },
+    {
+      "edge_index": 40,
+      "distance_m": 47.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.567235,
+        "lon": 77.0399
+      },
+      "end_coordinate": {
+        "lat": 28.566818,
+        "lon": 77.039847
+      }
+    },
+    {
+      "edge_index": 41,
+      "distance_m": 17.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.566818,
+        "lon": 77.039847
+      },
+      "end_coordinate": {
+        "lat": 28.566671,
+        "lon": 77.039828
+      }
+    },
+    {
+      "edge_index": 42,
+      "distance_m": 14.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.566671,
+        "lon": 77.039828
+      },
+      "end_coordinate": {
+        "lat": 28.566543,
+        "lon": 77.039812
+      }
+    },
+    {
+      "edge_index": 43,
+      "distance_m": 57.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.566543,
+        "lon": 77.039812
+      },
+      "end_coordinate": {
+        "lat": 28.56603,
+        "lon": 77.039757
+      }
+    },
+    {
+      "edge_index": 44,
+      "distance_m": 208.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.56603,
+        "lon": 77.039757
+      },
+      "end_coordinate": {
+        "lat": 28.564171,
+        "lon": 77.03951
+      }
+    },
+    {
+      "edge_index": 45,
+      "distance_m": 13.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.564171,
+        "lon": 77.03951
+      },
+      "end_coordinate": {
+        "lat": 28.564054,
+        "lon": 77.039494
+      }
+    },
+    {
+      "edge_index": 46,
+      "distance_m": 31.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.564054,
+        "lon": 77.039494
+      },
+      "end_coordinate": {
+        "lat": 28.563779,
+        "lon": 77.03946
+      }
+    },
+    {
+      "edge_index": 47,
+      "distance_m": 155.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.563779,
+        "lon": 77.03946
+      },
+      "end_coordinate": {
+        "lat": 28.562395,
+        "lon": 77.039289
+      }
+    },
+    {
+      "edge_index": 48,
+      "distance_m": 168.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.562395,
+        "lon": 77.039289
+      },
+      "end_coordinate": {
+        "lat": 28.5609,
+        "lon": 77.03909
+      }
+    },
+    {
+      "edge_index": 49,
+      "distance_m": 12.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.5609,
+        "lon": 77.03909
+      },
+      "end_coordinate": {
+        "lat": 28.560794,
+        "lon": 77.039073
+      }
+    },
+    {
+      "edge_index": 50,
+      "distance_m": 29.0,
+      "speed_kph": 63,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.560794,
+        "lon": 77.039073
+      },
+      "end_coordinate": {
+        "lat": 28.560593,
+        "lon": 77.039251
+      }
+    },
+    {
+      "edge_index": 51,
+      "distance_m": 18.0,
+      "speed_kph": 63,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.560593,
+        "lon": 77.039251
+      },
+      "end_coordinate": {
+        "lat": 28.560487,
+        "lon": 77.039394
+      }
+    },
+    {
+      "edge_index": 52,
+      "distance_m": 7.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.560487,
+        "lon": 77.039394
+      },
+      "end_coordinate": {
+        "lat": 28.560469,
+        "lon": 77.039466
+      }
+    },
+    {
+      "edge_index": 53,
+      "distance_m": 263.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.560469,
+        "lon": 77.039466
+      },
+      "end_coordinate": {
+        "lat": 28.559755,
+        "lon": 77.042034
+      }
+    },
+    {
+      "edge_index": 54,
+      "distance_m": 120.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.559755,
+        "lon": 77.042034
+      },
+      "end_coordinate": {
+        "lat": 28.559297,
+        "lon": 77.043144
+      }
+    },
+    {
+      "edge_index": 55,
+      "distance_m": 9.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.559297,
+        "lon": 77.043144
+      },
+      "end_coordinate": {
+        "lat": 28.559262,
+        "lon": 77.043223
+      }
+    },
+    {
+      "edge_index": 56,
+      "distance_m": 305.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.559262,
+        "lon": 77.043223
+      },
+      "end_coordinate": {
+        "lat": 28.557875,
+        "lon": 77.045902
+      }
+    },
+    {
+      "edge_index": 57,
+      "distance_m": 119.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.557875,
+        "lon": 77.045902
+      },
+      "end_coordinate": {
+        "lat": 28.557248,
+        "lon": 77.046884
+      }
+    },
+    {
+      "edge_index": 58,
+      "distance_m": 54.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.557248,
+        "lon": 77.046884
+      },
+      "end_coordinate": {
+        "lat": 28.556962,
+        "lon": 77.04733
+      }
+    },
+    {
+      "edge_index": 59,
+      "distance_m": 78.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.556962,
+        "lon": 77.04733
+      },
+      "end_coordinate": {
+        "lat": 28.556546,
+        "lon": 77.047972
+      }
+    },
+    {
+      "edge_index": 60,
+      "distance_m": 12.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.556546,
+        "lon": 77.047972
+      },
+      "end_coordinate": {
+        "lat": 28.556483,
+        "lon": 77.048069
+      }
+    },
+    {
+      "edge_index": 61,
+      "distance_m": 14.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.556483,
+        "lon": 77.048069
+      },
+      "end_coordinate": {
+        "lat": 28.556407,
+        "lon": 77.048186
+      }
+    },
+    {
+      "edge_index": 62,
+      "distance_m": 282.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.556407,
+        "lon": 77.048186
+      },
+      "end_coordinate": {
+        "lat": 28.555175,
+        "lon": 77.050671
+      }
+    },
+    {
+      "edge_index": 63,
+      "distance_m": 35.0,
+      "speed_kph": 37,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.555175,
+        "lon": 77.050671
+      },
+      "end_coordinate": {
+        "lat": 28.555133,
+        "lon": 77.051024
+      }
+    },
+    {
+      "edge_index": 64,
+      "distance_m": 31.0,
+      "speed_kph": 37,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.555133,
+        "lon": 77.051024
+      },
+      "end_coordinate": {
+        "lat": 28.554961,
+        "lon": 77.051269
+      }
+    },
+    {
+      "edge_index": 65,
+      "distance_m": 41.0,
+      "speed_kph": 37,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.554961,
+        "lon": 77.051269
+      },
+      "end_coordinate": {
+        "lat": 28.554617,
+        "lon": 77.051398
+      }
+    },
+    {
+      "edge_index": 66,
+      "distance_m": 11.0,
+      "speed_kph": 37,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.554617,
+        "lon": 77.051398
+      },
+      "end_coordinate": {
+        "lat": 28.55452,
+        "lon": 77.051386
+      }
+    },
+    {
+      "edge_index": 67,
+      "distance_m": 310.0,
+      "speed_kph": 72,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.55452,
+        "lon": 77.051386
+      },
+      "end_coordinate": {
+        "lat": 28.552476,
+        "lon": 77.053516
+      }
+    },
+    {
+      "edge_index": 68,
+      "distance_m": 229.0,
+      "speed_kph": 72,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.552476,
+        "lon": 77.053516
+      },
+      "end_coordinate": {
+        "lat": 28.550583,
+        "lon": 77.054432
+      }
+    },
+    {
+      "edge_index": 69,
+      "distance_m": 190.0,
+      "speed_kph": 72,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.550583,
+        "lon": 77.054432
+      },
+      "end_coordinate": {
+        "lat": 28.549099,
+        "lon": 77.055375
+      }
+    },
+    {
+      "edge_index": 70,
+      "distance_m": 37.0,
+      "speed_kph": 100,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.549099,
+        "lon": 77.055375
+      },
+      "end_coordinate": {
+        "lat": 28.54887,
+        "lon": 77.05565
+      }
+    },
+    {
+      "edge_index": 71,
+      "distance_m": 203.0,
+      "speed_kph": 100,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.54887,
+        "lon": 77.05565
+      },
+      "end_coordinate": {
+        "lat": 28.547694,
+        "lon": 77.057217
+      }
+    },
+    {
+      "edge_index": 72,
+      "distance_m": 83.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.547694,
+        "lon": 77.057217
+      },
+      "end_coordinate": {
+        "lat": 28.547243,
+        "lon": 77.057897
+      }
+    },
+    {
+      "edge_index": 73,
+      "distance_m": 77.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.547243,
+        "lon": 77.057897
+      },
+      "end_coordinate": {
+        "lat": 28.546962,
+        "lon": 77.058619
+      }
+    },
+    {
+      "edge_index": 74,
+      "distance_m": 163.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.546962,
+        "lon": 77.058619
+      },
+      "end_coordinate": {
+        "lat": 28.546099,
+        "lon": 77.059965
+      }
+    },
+    {
+      "edge_index": 75,
+      "distance_m": 51.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.546099,
+        "lon": 77.059965
+      },
+      "end_coordinate": {
+        "lat": 28.545931,
+        "lon": 77.060452
+      }
+    },
+    {
+      "edge_index": 76,
+      "distance_m": 237.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.545931,
+        "lon": 77.060452
+      },
+      "end_coordinate": {
+        "lat": 28.545006,
+        "lon": 77.062633
+      }
+    },
+    {
+      "edge_index": 77,
+      "distance_m": 1068.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.545006,
+        "lon": 77.062633
+      },
+      "end_coordinate": {
+        "lat": 28.542577,
+        "lon": 77.073183
+      }
+    },
+    {
+      "edge_index": 78,
+      "distance_m": 973.0,
+      "speed_kph": 90,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.542577,
+        "lon": 77.073183
+      },
+      "end_coordinate": {
+        "lat": 28.540044,
+        "lon": 77.082679
+      }
+    },
+    {
+      "edge_index": 79,
+      "distance_m": 738.0,
+      "speed_kph": 90,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.540044,
+        "lon": 77.082679
+      },
+      "end_coordinate": {
+        "lat": 28.538474,
+        "lon": 77.089983
+      }
+    },
+    {
+      "edge_index": 80,
+      "distance_m": 228.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.538474,
+        "lon": 77.089983
+      },
+      "end_coordinate": {
+        "lat": 28.538102,
+        "lon": 77.092271
+      }
+    },
+    {
+      "edge_index": 81,
+      "distance_m": 14.0,
+      "speed_kph": 73,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.538102,
+        "lon": 77.092271
+      },
+      "end_coordinate": {
+        "lat": 28.538072,
+        "lon": 77.092412
+      }
+    },
+    {
+      "edge_index": 82,
+      "distance_m": 14.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.538072,
+        "lon": 77.092412
+      },
+      "end_coordinate": {
+        "lat": 28.53795,
+        "lon": 77.092373
+      }
+    },
+    {
+      "edge_index": 83,
+      "distance_m": 17.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.53795,
+        "lon": 77.092373
+      },
+      "end_coordinate": {
+        "lat": 28.537807,
+        "lon": 77.092314
+      }
+    },
+    {
+      "edge_index": 84,
+      "distance_m": 20.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.537807,
+        "lon": 77.092314
+      },
+      "end_coordinate": {
+        "lat": 28.537632,
+        "lon": 77.092254
+      }
+    },
+    {
+      "edge_index": 85,
+      "distance_m": 199.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.537632,
+        "lon": 77.092254
+      },
+      "end_coordinate": {
+        "lat": 28.536007,
+        "lon": 77.091405
+      }
+    },
+    {
+      "edge_index": 86,
+      "distance_m": 39.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.536007,
+        "lon": 77.091405
+      },
+      "end_coordinate": {
+        "lat": 28.535692,
+        "lon": 77.091225
+      }
+    },
+    {
+      "edge_index": 87,
+      "distance_m": 285.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.535692,
+        "lon": 77.091225
+      },
+      "end_coordinate": {
+        "lat": 28.533472,
+        "lon": 77.089774
+      }
+    },
+    {
+      "edge_index": 88,
+      "distance_m": 218.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.533472,
+        "lon": 77.089774
+      },
+      "end_coordinate": {
+        "lat": 28.531778,
+        "lon": 77.088648
+      }
+    },
+    {
+      "edge_index": 89,
+      "distance_m": 17.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.531778,
+        "lon": 77.088648
+      },
+      "end_coordinate": {
+        "lat": 28.53165,
+        "lon": 77.088562
+      }
+    },
+    {
+      "edge_index": 90,
+      "distance_m": 239.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.53165,
+        "lon": 77.088562
+      },
+      "end_coordinate": {
+        "lat": 28.5298,
+        "lon": 77.087322
+      }
+    },
+    {
+      "edge_index": 91,
+      "distance_m": 200.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.5298,
+        "lon": 77.087322
+      },
+      "end_coordinate": {
+        "lat": 28.528233,
+        "lon": 77.086323
+      }
+    },
+    {
+      "edge_index": 92,
+      "distance_m": 31.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.528233,
+        "lon": 77.086323
+      },
+      "end_coordinate": {
+        "lat": 28.527992,
+        "lon": 77.086166
+      }
+    },
+    {
+      "edge_index": 93,
+      "distance_m": 170.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.527992,
+        "lon": 77.086166
+      },
+      "end_coordinate": {
+        "lat": 28.526667,
+        "lon": 77.085309
+      }
+    },
+    {
+      "edge_index": 94,
+      "distance_m": 13.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.526667,
+        "lon": 77.085309
+      },
+      "end_coordinate": {
+        "lat": 28.526566,
+        "lon": 77.085238
+      }
+    },
+    {
+      "edge_index": 95,
+      "distance_m": 107.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.526566,
+        "lon": 77.085238
+      },
+      "end_coordinate": {
+        "lat": 28.525749,
+        "lon": 77.084662
+      }
+    },
+    {
+      "edge_index": 96,
+      "distance_m": 94.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.525749,
+        "lon": 77.084662
+      },
+      "end_coordinate": {
+        "lat": 28.525016,
+        "lon": 77.084178
+      }
+    },
+    {
+      "edge_index": 97,
+      "distance_m": 15.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.525016,
+        "lon": 77.084178
+      },
+      "end_coordinate": {
+        "lat": 28.524896,
+        "lon": 77.084098
+      }
+    },
+    {
+      "edge_index": 98,
+      "distance_m": 98.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.524896,
+        "lon": 77.084098
+      },
+      "end_coordinate": {
+        "lat": 28.524136,
+        "lon": 77.083592
+      }
+    },
+    {
+      "edge_index": 99,
+      "distance_m": 135.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.524136,
+        "lon": 77.083592
+      },
+      "end_coordinate": {
+        "lat": 28.523088,
+        "lon": 77.082894
+      }
+    },
+    {
+      "edge_index": 100,
+      "distance_m": 13.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.523088,
+        "lon": 77.082894
+      },
+      "end_coordinate": {
+        "lat": 28.522985,
+        "lon": 77.082836
+      }
+    },
+    {
+      "edge_index": 101,
+      "distance_m": 140.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.522985,
+        "lon": 77.082836
+      },
+      "end_coordinate": {
+        "lat": 28.521826,
+        "lon": 77.082296
+      }
+    },
+    {
+      "edge_index": 102,
+      "distance_m": 73.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.521826,
+        "lon": 77.082296
+      },
+      "end_coordinate": {
+        "lat": 28.5212,
+        "lon": 77.082077
+      }
+    },
+    {
+      "edge_index": 103,
+      "distance_m": 29.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.5212,
+        "lon": 77.082077
+      },
+      "end_coordinate": {
+        "lat": 28.520947,
+        "lon": 77.081993
+      }
+    },
+    {
+      "edge_index": 104,
+      "distance_m": 86.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.520947,
+        "lon": 77.081993
+      },
+      "end_coordinate": {
+        "lat": 28.52022,
+        "lon": 77.081753
+      }
+    },
+    {
+      "edge_index": 105,
+      "distance_m": 17.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.52022,
+        "lon": 77.081753
+      },
+      "end_coordinate": {
+        "lat": 28.520079,
+        "lon": 77.081688
+      }
+    },
+    {
+      "edge_index": 106,
+      "distance_m": 16.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.520079,
+        "lon": 77.081688
+      },
+      "end_coordinate": {
+        "lat": 28.519942,
+        "lon": 77.081634
+      }
+    },
+    {
+      "edge_index": 107,
+      "distance_m": 9.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.519942,
+        "lon": 77.081634
+      },
+      "end_coordinate": {
+        "lat": 28.51987,
+        "lon": 77.081602
+      }
+    },
+    {
+      "edge_index": 108,
+      "distance_m": 4.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.51987,
+        "lon": 77.081602
+      },
+      "end_coordinate": {
+        "lat": 28.519836,
+        "lon": 77.081588
+      }
+    },
+    {
+      "edge_index": 109,
+      "distance_m": 128.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.519836,
+        "lon": 77.081588
+      },
+      "end_coordinate": {
+        "lat": 28.518769,
+        "lon": 77.081119
+      }
+    },
+    {
+      "edge_index": 110,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.518769,
+        "lon": 77.081119
+      },
+      "end_coordinate": {
+        "lat": 28.51868,
+        "lon": 77.081061
+      }
+    },
+    {
+      "edge_index": 111,
+      "distance_m": 34.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.51868,
+        "lon": 77.081061
+      },
+      "end_coordinate": {
+        "lat": 28.518441,
+        "lon": 77.080853
+      }
+    },
+    {
+      "edge_index": 112,
+      "distance_m": 3.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.518441,
+        "lon": 77.080853
+      },
+      "end_coordinate": {
+        "lat": 28.518424,
+        "lon": 77.080834
+      }
+    },
+    {
+      "edge_index": 113,
+      "distance_m": 44.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.518424,
+        "lon": 77.080834
+      },
+      "end_coordinate": {
+        "lat": 28.518115,
+        "lon": 77.080561
+      }
+    },
+    {
+      "edge_index": 114,
+      "distance_m": 11.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.518115,
+        "lon": 77.080561
+      },
+      "end_coordinate": {
+        "lat": 28.518028,
+        "lon": 77.080499
+      }
+    },
+    {
+      "edge_index": 115,
+      "distance_m": 39.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.518028,
+        "lon": 77.080499
+      },
+      "end_coordinate": {
+        "lat": 28.517732,
+        "lon": 77.080291
+      }
+    },
+    {
+      "edge_index": 116,
+      "distance_m": 468.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.517732,
+        "lon": 77.080291
+      },
+      "end_coordinate": {
+        "lat": 28.515755,
+        "lon": 77.084504
+      }
+    },
+    {
+      "edge_index": 117,
+      "distance_m": 108.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.515755,
+        "lon": 77.084504
+      },
+      "end_coordinate": {
+        "lat": 28.515224,
+        "lon": 77.085422
+      }
+    },
+    {
+      "edge_index": 118,
+      "distance_m": 215.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.515224,
+        "lon": 77.085422
+      },
+      "end_coordinate": {
+        "lat": 28.514113,
+        "lon": 77.087223
+      }
+    },
+    {
+      "edge_index": 119,
+      "distance_m": 146.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.514113,
+        "lon": 77.087223
+      },
+      "end_coordinate": {
+        "lat": 28.51336,
+        "lon": 77.088445
+      }
+    },
+    {
+      "edge_index": 120,
+      "distance_m": 77.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.51336,
+        "lon": 77.088445
+      },
+      "end_coordinate": {
+        "lat": 28.512953,
+        "lon": 77.089079
+      }
+    },
+    {
+      "edge_index": 121,
+      "distance_m": 316.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.512953,
+        "lon": 77.089079
+      },
+      "end_coordinate": {
+        "lat": 28.511212,
+        "lon": 77.091619
+      }
+    },
+    {
+      "edge_index": 122,
+      "distance_m": 20.0,
+      "speed_kph": 50,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.511212,
+        "lon": 77.091619
+      },
+      "end_coordinate": {
+        "lat": 28.511058,
+        "lon": 77.091681
+      }
+    },
+    {
+      "edge_index": 123,
+      "distance_m": 3.0,
+      "speed_kph": 50,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.511058,
+        "lon": 77.091681
+      },
+      "end_coordinate": {
+        "lat": 28.511063,
+        "lon": 77.091708
+      }
+    },
+    {
+      "edge_index": 124,
+      "distance_m": 14.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.511063,
+        "lon": 77.091708
+      },
+      "end_coordinate": {
+        "lat": 28.510938,
+        "lon": 77.091668
+      }
+    },
+    {
+      "edge_index": 125,
+      "distance_m": 6.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.510938,
+        "lon": 77.091668
+      },
+      "end_coordinate": {
+        "lat": 28.510884,
+        "lon": 77.091651
+      }
+    },
+    {
+      "edge_index": 126,
+      "distance_m": 65.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.510884,
+        "lon": 77.091651
+      },
+      "end_coordinate": {
+        "lat": 28.51048,
+        "lon": 77.092058
+      }
+    },
+    {
+      "edge_index": 127,
+      "distance_m": 53.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.51048,
+        "lon": 77.092058
+      },
+      "end_coordinate": {
+        "lat": 28.510055,
+        "lon": 77.092306
+      }
+    },
+    {
+      "edge_index": 128,
+      "distance_m": 21.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.510055,
+        "lon": 77.092306
+      },
+      "end_coordinate": {
+        "lat": 28.509886,
+        "lon": 77.092424
+      }
+    },
+    {
+      "edge_index": 129,
+      "distance_m": 22.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509886,
+        "lon": 77.092424
+      },
+      "end_coordinate": {
+        "lat": 28.509721,
+        "lon": 77.092552
+      }
+    },
+    {
+      "edge_index": 130,
+      "distance_m": 64.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509721,
+        "lon": 77.092552
+      },
+      "end_coordinate": {
+        "lat": 28.509285,
+        "lon": 77.092409
+      }
+    },
+    {
+      "edge_index": 131,
+      "distance_m": 22.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509285,
+        "lon": 77.092409
+      },
+      "end_coordinate": {
+        "lat": 28.509375,
+        "lon": 77.092214
+      }
+    },
+    {
+      "edge_index": 132,
+      "distance_m": 25.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509375,
+        "lon": 77.092214
+      },
+      "end_coordinate": {
+        "lat": 28.509519,
+        "lon": 77.092011
+      }
+    },
+    {
+      "edge_index": 133,
+      "distance_m": 5.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509519,
+        "lon": 77.092011
+      },
+      "end_coordinate": {
+        "lat": 28.509486,
+        "lon": 77.091983
+      }
+    },
+    {
+      "edge_index": 134,
+      "distance_m": 1.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509486,
+        "lon": 77.091983
+      },
+      "end_coordinate": {
+        "lat": 28.509479,
+        "lon": 77.091976
+      }
+    },
+    {
+      "edge_index": 135,
+      "distance_m": 16.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509479,
+        "lon": 77.091976
+      },
+      "end_coordinate": {
+        "lat": 28.509365,
+        "lon": 77.091869
+      }
+    },
+    {
+      "edge_index": 136,
+      "distance_m": 4.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509365,
+        "lon": 77.091869
+      },
+      "end_coordinate": {
+        "lat": 28.509338,
+        "lon": 77.091843
+      }
+    },
+    {
+      "edge_index": 137,
+      "distance_m": 20.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509338,
+        "lon": 77.091843
+      },
+      "end_coordinate": {
+        "lat": 28.509203,
+        "lon": 77.091716
+      }
+    },
+    {
+      "edge_index": 138,
+      "distance_m": 37.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509203,
+        "lon": 77.091716
+      },
+      "end_coordinate": {
+        "lat": 28.508945,
+        "lon": 77.091472
+      }
+    },
+    {
+      "edge_index": 139,
+      "distance_m": 3.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.508945,
+        "lon": 77.091472
+      },
+      "end_coordinate": {
+        "lat": 28.508924,
+        "lon": 77.091452
+      }
+    },
+    {
+      "edge_index": 140,
+      "distance_m": 24.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.508924,
+        "lon": 77.091452
+      },
+      "end_coordinate": {
+        "lat": 28.50876,
+        "lon": 77.091298
+      }
+    },
+    {
+      "edge_index": 141,
+      "distance_m": 26.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.50876,
+        "lon": 77.091298
+      },
+      "end_coordinate": {
+        "lat": 28.508581,
+        "lon": 77.091128
+      }
+    },
+    {
+      "edge_index": 142,
+      "distance_m": 7.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.508581,
+        "lon": 77.091128
+      },
+      "end_coordinate": {
+        "lat": 28.508534,
+        "lon": 77.091085
+      }
+    },
+    {
+      "edge_index": 143,
+      "distance_m": 37.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.508534,
+        "lon": 77.091085
+      },
+      "end_coordinate": {
+        "lat": 28.50828,
+        "lon": 77.090844
+      }
+    },
+    {
+      "edge_index": 144,
+      "distance_m": 78.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.50828,
+        "lon": 77.090844
+      },
+      "end_coordinate": {
+        "lat": 28.507741,
+        "lon": 77.090336
+      }
+    },
+    {
+      "edge_index": 145,
+      "distance_m": 51.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.507741,
+        "lon": 77.090336
+      },
+      "end_coordinate": {
+        "lat": 28.507389,
+        "lon": 77.090003
+      }
+    },
+    {
+      "edge_index": 146,
+      "distance_m": 11.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.507389,
+        "lon": 77.090003
+      },
+      "end_coordinate": {
+        "lat": 28.507315,
+        "lon": 77.089933
+      }
+    },
+    {
+      "edge_index": 147,
+      "distance_m": 48.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.507315,
+        "lon": 77.089933
+      },
+      "end_coordinate": {
+        "lat": 28.506981,
+        "lon": 77.089618
+      }
+    },
+    {
+      "edge_index": 148,
+      "distance_m": 79.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.506981,
+        "lon": 77.089618
+      },
+      "end_coordinate": {
+        "lat": 28.506431,
+        "lon": 77.089099
+      }
+    },
+    {
+      "edge_index": 149,
+      "distance_m": 159.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.506431,
+        "lon": 77.089099
+      },
+      "end_coordinate": {
+        "lat": 28.505331,
+        "lon": 77.08806
+      }
+    },
+    {
+      "edge_index": 150,
+      "distance_m": 38.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.505331,
+        "lon": 77.08806
+      },
+      "end_coordinate": {
+        "lat": 28.505071,
+        "lon": 77.087815
+      }
+    },
+    {
+      "edge_index": 151,
+      "distance_m": 39.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.505071,
+        "lon": 77.087815
+      },
+      "end_coordinate": {
+        "lat": 28.5048,
+        "lon": 77.087559
+      }
+    },
+    {
+      "edge_index": 152,
+      "distance_m": 34.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.5048,
+        "lon": 77.087559
+      },
+      "end_coordinate": {
+        "lat": 28.504561,
+        "lon": 77.087334
+      }
+    },
+    {
+      "edge_index": 153,
+      "distance_m": 6.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.504561,
+        "lon": 77.087334
+      },
+      "end_coordinate": {
+        "lat": 28.504518,
+        "lon": 77.087293
+      }
+    },
+    {
+      "edge_index": 154,
+      "distance_m": 43.0,
+      "speed_kph": 20,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.504518,
+        "lon": 77.087293
+      },
+      "end_coordinate": {
+        "lat": 28.50422,
+        "lon": 77.087014
+      }
+    },
+    {
+      "edge_index": 155,
+      "distance_m": 100.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.50422,
+        "lon": 77.087014
+      },
+      "end_coordinate": {
+        "lat": 28.503642,
+        "lon": 77.087794
+      }
+    },
+    {
+      "edge_index": 156,
+      "distance_m": 38.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.503642,
+        "lon": 77.087794
+      },
+      "end_coordinate": {
+        "lat": 28.503419,
+        "lon": 77.088092
+      }
+    },
+    {
+      "edge_index": 157,
+      "distance_m": 98.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.503419,
+        "lon": 77.088092
+      },
+      "end_coordinate": {
+        "lat": 28.502856,
+        "lon": 77.088862
+      }
+    },
+    {
+      "edge_index": 158,
+      "distance_m": 69.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.502856,
+        "lon": 77.088862
+      },
+      "end_coordinate": {
+        "lat": 28.502457,
+        "lon": 77.089402
+      }
+    },
+    {
+      "edge_index": 159,
+      "distance_m": 19.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.502457,
+        "lon": 77.089402
+      },
+      "end_coordinate": {
+        "lat": 28.502346,
+        "lon": 77.089552
+      }
+    },
+    {
+      "edge_index": 160,
+      "distance_m": 51.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.502346,
+        "lon": 77.089552
+      },
+      "end_coordinate": {
+        "lat": 28.502053,
+        "lon": 77.089949
+      }
+    },
+    {
+      "edge_index": 161,
+      "distance_m": 172.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.502053,
+        "lon": 77.089949
+      },
+      "end_coordinate": {
+        "lat": 28.501459,
+        "lon": 77.09136
+      }
+    },
+    {
+      "edge_index": 162,
+      "distance_m": 63.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.501459,
+        "lon": 77.09136
+      },
+      "end_coordinate": {
+        "lat": 28.501911,
+        "lon": 77.091738
+      }
+    },
+    {
+      "edge_index": 163,
+      "distance_m": 15.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.501911,
+        "lon": 77.091738
+      },
+      "end_coordinate": {
+        "lat": 28.502025,
+        "lon": 77.091828
+      }
+    },
+    {
+      "edge_index": 164,
+      "distance_m": 263.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.502025,
+        "lon": 77.091828
+      },
+      "end_coordinate": {
+        "lat": 28.50395,
+        "lon": 77.093395
+      }
+    },
+    {
+      "edge_index": 165,
+      "distance_m": 227.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.50395,
+        "lon": 77.093395
+      },
+      "end_coordinate": {
+        "lat": 28.505663,
+        "lon": 77.094625
+      }
+    },
+    {
+      "edge_index": 166,
+      "distance_m": 21.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.505663,
+        "lon": 77.094625
+      },
+      "end_coordinate": {
+        "lat": 28.505845,
+        "lon": 77.094694
+      }
+    },
+    {
+      "edge_index": 167,
+      "distance_m": 216.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.505845,
+        "lon": 77.094694
+      },
+      "end_coordinate": {
+        "lat": 28.507747,
+        "lon": 77.094532
+      }
+    },
+    {
+      "edge_index": 168,
+      "distance_m": 177.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.507747,
+        "lon": 77.094532
+      },
+      "end_coordinate": {
+        "lat": 28.509173,
+        "lon": 77.093733
+      }
+    },
+    {
+      "edge_index": 169,
+      "distance_m": 60.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509173,
+        "lon": 77.093733
+      },
+      "end_coordinate": {
+        "lat": 28.509638,
+        "lon": 77.093425
+      }
+    },
+    {
+      "edge_index": 170,
+      "distance_m": 92.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.509638,
+        "lon": 77.093425
+      },
+      "end_coordinate": {
+        "lat": 28.510374,
+        "lon": 77.093009
+      }
+    },
+    {
+      "edge_index": 171,
+      "distance_m": 91.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.510374,
+        "lon": 77.093009
+      },
+      "end_coordinate": {
+        "lat": 28.511098,
+        "lon": 77.092571
+      }
+    },
+    {
+      "edge_index": 172,
+      "distance_m": 180.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.511098,
+        "lon": 77.092571
+      },
+      "end_coordinate": {
+        "lat": 28.512709,
+        "lon": 77.092568
+      }
+    },
+    {
+      "edge_index": 173,
+      "distance_m": 71.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.512709,
+        "lon": 77.092568
+      },
+      "end_coordinate": {
+        "lat": 28.51328,
+        "lon": 77.092857
+      }
+    },
+    {
+      "edge_index": 174,
+      "distance_m": 94.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.51328,
+        "lon": 77.092857
+      },
+      "end_coordinate": {
+        "lat": 28.514092,
+        "lon": 77.093136
+      }
+    },
+    {
+      "edge_index": 175,
+      "distance_m": 256.0,
+      "speed_kph": 80,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.514092,
+        "lon": 77.093136
+      },
+      "end_coordinate": {
+        "lat": 28.516111,
+        "lon": 77.094402
+      }
+    },
+    {
+      "edge_index": 176,
+      "distance_m": 214.0,
+      "speed_kph": 70,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.516111,
+        "lon": 77.094402
+      },
+      "end_coordinate": {
+        "lat": 28.517771,
+        "lon": 77.095498
+      }
+    },
+    {
+      "edge_index": 177,
+      "distance_m": 380.0,
+      "speed_kph": 70,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.517771,
+        "lon": 77.095498
+      },
+      "end_coordinate": {
+        "lat": 28.5207,
+        "lon": 77.097493
+      }
+    },
+    {
+      "edge_index": 178,
+      "distance_m": 278.0,
+      "speed_kph": 70,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.5207,
+        "lon": 77.097493
+      },
+      "end_coordinate": {
+        "lat": 28.522853,
+        "lon": 77.098928
+      }
+    },
+    {
+      "edge_index": 179,
+      "distance_m": 631.0,
+      "speed_kph": 70,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.522853,
+        "lon": 77.098928
+      },
+      "end_coordinate": {
+        "lat": 28.527728,
+        "lon": 77.102212
+      }
+    },
+    {
+      "edge_index": 180,
+      "distance_m": 623.0,
+      "speed_kph": 70,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.527728,
+        "lon": 77.102212
+      },
+      "end_coordinate": {
+        "lat": 28.532454,
+        "lon": 77.105618
+      }
+    },
+    {
+      "edge_index": 181,
+      "distance_m": 192.0,
+      "speed_kph": 70,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.532454,
+        "lon": 77.105618
+      },
+      "end_coordinate": {
+        "lat": 28.533392,
+        "lon": 77.10726
+      }
+    },
+    {
+      "edge_index": 182,
+      "distance_m": 19.0,
+      "speed_kph": 80,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.533392,
+        "lon": 77.10726
+      },
+      "end_coordinate": {
+        "lat": 28.533478,
+        "lon": 77.107431
+      }
+    },
+    {
+      "edge_index": 183,
+      "distance_m": 376.0,
+      "speed_kph": 80,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.533478,
+        "lon": 77.107431
+      },
+      "end_coordinate": {
+        "lat": 28.53518,
+        "lon": 77.110748
+      }
+    },
+    {
+      "edge_index": 184,
+      "distance_m": 23.0,
+      "speed_kph": 80,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.53518,
+        "lon": 77.110748
+      },
+      "end_coordinate": {
+        "lat": 28.535281,
+        "lon": 77.110956
+      }
+    },
+    {
+      "edge_index": 185,
+      "distance_m": 53.0,
+      "speed_kph": 80,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.535281,
+        "lon": 77.110956
+      },
+      "end_coordinate": {
+        "lat": 28.53551,
+        "lon": 77.111427
+      }
+    },
+    {
+      "edge_index": 186,
+      "distance_m": 673.0,
+      "speed_kph": 80,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.53551,
+        "lon": 77.111427
+      },
+      "end_coordinate": {
+        "lat": 28.539288,
+        "lon": 77.116578
+      }
+    },
+    {
+      "edge_index": 187,
+      "distance_m": 58.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.539288,
+        "lon": 77.116578
+      },
+      "end_coordinate": {
+        "lat": 28.539806,
+        "lon": 77.116625
+      }
+    },
+    {
+      "edge_index": 188,
+      "distance_m": 89.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.539806,
+        "lon": 77.116625
+      },
+      "end_coordinate": {
+        "lat": 28.540545,
+        "lon": 77.116957
+      }
+    },
+    {
+      "edge_index": 189,
+      "distance_m": 36.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.540545,
+        "lon": 77.116957
+      },
+      "end_coordinate": {
+        "lat": 28.54084,
+        "lon": 77.117096
+      }
+    },
+    {
+      "edge_index": 190,
+      "distance_m": 57.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.54084,
+        "lon": 77.117096
+      },
+      "end_coordinate": {
+        "lat": 28.541316,
+        "lon": 77.11732
+      }
+    },
+    {
+      "edge_index": 191,
+      "distance_m": 197.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.541316,
+        "lon": 77.11732
+      },
+      "end_coordinate": {
+        "lat": 28.543013,
+        "lon": 77.116812
+      }
+    },
+    {
+      "edge_index": 192,
+      "distance_m": 49.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.543013,
+        "lon": 77.116812
+      },
+      "end_coordinate": {
+        "lat": 28.543419,
+        "lon": 77.11663
+      }
+    },
+    {
+      "edge_index": 193,
+      "distance_m": 94.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.543419,
+        "lon": 77.11663
+      },
+      "end_coordinate": {
+        "lat": 28.543955,
+        "lon": 77.115911
+      }
+    },
+    {
+      "edge_index": 194,
+      "distance_m": 32.0,
+      "speed_kph": 40,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.543955,
+        "lon": 77.115911
+      },
+      "end_coordinate": {
+        "lat": 28.544032,
+        "lon": 77.115581
+      }
+    },
+    {
+      "edge_index": 195,
+      "distance_m": 42.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.544032,
+        "lon": 77.115581
+      },
+      "end_coordinate": {
+        "lat": 28.544134,
+        "lon": 77.115171
+      }
+    },
+    {
+      "edge_index": 196,
+      "distance_m": 42.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.544134,
+        "lon": 77.115171
+      },
+      "end_coordinate": {
+        "lat": 28.544215,
+        "lon": 77.114753
+      }
+    },
+    {
+      "edge_index": 197,
+      "distance_m": 641.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.544215,
+        "lon": 77.114753
+      },
+      "end_coordinate": {
+        "lat": 28.545688,
+        "lon": 77.108416
+      }
+    },
+    {
+      "edge_index": 198,
+      "distance_m": 169.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.545688,
+        "lon": 77.108416
+      },
+      "end_coordinate": {
+        "lat": 28.546094,
+        "lon": 77.106754
+      }
+    },
+    {
+      "edge_index": 199,
+      "distance_m": 320.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.546094,
+        "lon": 77.106754
+      },
+      "end_coordinate": {
+        "lat": 28.548198,
+        "lon": 77.105185
+      }
+    },
+    {
+      "edge_index": 200,
+      "distance_m": 39.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.548198,
+        "lon": 77.105185
+      },
+      "end_coordinate": {
+        "lat": 28.548509,
+        "lon": 77.105005
+      }
+    },
+    {
+      "edge_index": 201,
+      "distance_m": 87.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.548509,
+        "lon": 77.105005
+      },
+      "end_coordinate": {
+        "lat": 28.54922,
+        "lon": 77.10463
+      }
+    },
+    {
+      "edge_index": 202,
+      "distance_m": 5.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.54922,
+        "lon": 77.10463
+      },
+      "end_coordinate": {
+        "lat": 28.549259,
+        "lon": 77.104615
+      }
+    },
+    {
+      "edge_index": 203,
+      "distance_m": 31.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.549259,
+        "lon": 77.104615
+      },
+      "end_coordinate": {
+        "lat": 28.54952,
+        "lon": 77.104505
+      }
+    },
+    {
+      "edge_index": 204,
+      "distance_m": 63.0,
+      "speed_kph": 49,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.54952,
+        "lon": 77.104505
+      },
+      "end_coordinate": {
+        "lat": 28.550047,
+        "lon": 77.104273
+      }
+    },
+    {
+      "edge_index": 205,
+      "distance_m": 50.0,
+      "speed_kph": 60,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.550047,
+        "lon": 77.104273
+      },
+      "end_coordinate": {
+        "lat": 28.550463,
+        "lon": 77.104094
+      }
+    },
+    {
+      "edge_index": 206,
+      "distance_m": 366.0,
+      "speed_kph": 60,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.550463,
+        "lon": 77.104094
+      },
+      "end_coordinate": {
+        "lat": 28.552839,
+        "lon": 77.101719
+      }
+    },
+    {
+      "edge_index": 207,
+      "distance_m": 65.0,
+      "speed_kph": 60,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.552839,
+        "lon": 77.101719
+      },
+      "end_coordinate": {
+        "lat": 28.552994,
+        "lon": 77.101071
+      }
+    },
+    {
+      "edge_index": 208,
+      "distance_m": 93.0,
+      "speed_kph": 75,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.552994,
+        "lon": 77.101071
+      },
+      "end_coordinate": {
+        "lat": 28.5535,
+        "lon": 77.101221
+      }
+    },
+    {
+      "edge_index": 209,
+      "distance_m": 96.0,
+      "speed_kph": 60,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.5535,
+        "lon": 77.101221
+      },
+      "end_coordinate": {
+        "lat": 28.553273,
+        "lon": 77.102172
+      }
+    },
+    {
+      "edge_index": 210,
+      "distance_m": 116.0,
+      "speed_kph": 60,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.553273,
+        "lon": 77.102172
+      },
+      "end_coordinate": {
+        "lat": 28.553007,
+        "lon": 77.103314
+      }
+    },
+    {
+      "edge_index": 211,
+      "distance_m": 26.0,
+      "speed_kph": 60,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.553007,
+        "lon": 77.103314
+      },
+      "end_coordinate": {
+        "lat": 28.552947,
+        "lon": 77.103569
+      }
+    },
+    {
+      "edge_index": 212,
+      "distance_m": 164.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.552947,
+        "lon": 77.103569
+      },
+      "end_coordinate": {
+        "lat": 28.554186,
+        "lon": 77.104272
+      }
+    },
+    {
+      "edge_index": 213,
+      "distance_m": 10.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.554186,
+        "lon": 77.104272
+      },
+      "end_coordinate": {
+        "lat": 28.554273,
+        "lon": 77.104295
+      }
+    },
+    {
+      "edge_index": 214,
+      "distance_m": 63.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.554273,
+        "lon": 77.104295
+      },
+      "end_coordinate": {
+        "lat": 28.554821,
+        "lon": 77.104449
+      }
+    },
+    {
+      "edge_index": 215,
+      "distance_m": 23.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.554821,
+        "lon": 77.104449
+      },
+      "end_coordinate": {
+        "lat": 28.55502,
+        "lon": 77.104507
+      }
+    },
+    {
+      "edge_index": 216,
+      "distance_m": 39.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.55502,
+        "lon": 77.104507
+      },
+      "end_coordinate": {
+        "lat": 28.55534,
+        "lon": 77.104661
+      }
+    },
+    {
+      "edge_index": 217,
+      "distance_m": 225.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.55534,
+        "lon": 77.104661
+      },
+      "end_coordinate": {
+        "lat": 28.555844,
+        "lon": 77.102429
+      }
+    },
+    {
+      "edge_index": 218,
+      "distance_m": 96.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.555844,
+        "lon": 77.102429
+      },
+      "end_coordinate": {
+        "lat": 28.556058,
+        "lon": 77.101477
+      }
+    },
+    {
+      "edge_index": 219,
+      "distance_m": 50.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.556058,
+        "lon": 77.101477
+      },
+      "end_coordinate": {
+        "lat": 28.55617,
+        "lon": 77.100977
+      }
+    },
+    {
+      "edge_index": 220,
+      "distance_m": 65.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.55617,
+        "lon": 77.100977
+      },
+      "end_coordinate": {
+        "lat": 28.556316,
+        "lon": 77.100331
+      }
+    },
+    {
+      "edge_index": 221,
+      "distance_m": 59.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.556316,
+        "lon": 77.100331
+      },
+      "end_coordinate": {
+        "lat": 28.555795,
+        "lon": 77.100211
+      }
+    },
+    {
+      "edge_index": 222,
+      "distance_m": 25.0,
+      "speed_kph": 25,
+      "grade_pct": 0.0,
+      "start_coordinate": {
+        "lat": 28.555795,
+        "lon": 77.100211
+      },
+      "end_coordinate": {
+        "lat": 28.555851,
+        "lon": 77.099957
+      }
+    }
+  ]
+}

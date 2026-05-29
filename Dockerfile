@@ -18,6 +18,7 @@ COPY python ./python
 COPY vehicles_enrichment_GLOBAL_20260517_0915.csv .
 COPY india_ev_reviews.xlsx .
 COPY route_edges.json .
+COPY route_edges_charger.json .
 COPY valhalla.json .
 
 RUN useradd --create-home --shell /usr/sbin/nologin fastsim \

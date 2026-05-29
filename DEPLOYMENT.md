@@ -71,6 +71,7 @@ Required runtime data:
 vehicles_enrichment_GLOBAL_20260517_0915.csv
 india_ev_reviews.xlsx
 route_edges.json
+route_edges_charger.json
 valhalla.json
 ```
 
@@ -150,6 +151,7 @@ mkdir -p data
 cp vehicles_enrichment_GLOBAL_20260517_0915.csv data/
 cp india_ev_reviews.xlsx data/
 cp route_edges.json data/
+cp route_edges_charger.json data/
 cp valhalla.json data/
 ```
 
@@ -179,6 +181,7 @@ GUNICORN_TIMEOUT=120
 VEHICLE_ENRICHMENT_PATH=/data/vehicles_enrichment_GLOBAL_20260517_0915.csv
 INDIA_EV_REVIEWS_PATH=/data/india_ev_reviews.xlsx
 ROUTE_EDGES_PATH=/data/route_edges.json
+CHARGER_ROUTE_EDGES_PATH=/data/route_edges_charger.json
 VALHALLA_CONFIG_PATH=/data/valhalla.json
 ```
 
@@ -267,6 +270,14 @@ ok: Delhi route completed
 ok: confidence endpoint loaded
 all smoke checks passed
 ```
+
+To validate the longer charger route fixture instead of the shorter demo route:
+
+```bash
+python3 scripts/production_smoke.py --base-url http://localhost --route-edges data/route_edges_charger.json
+```
+
+This fixture contains 223 Valhalla edges, about 26.57 km of route distance, and is useful for proving that a realistic charger-route JSON can flow through the same FASTSim endpoint.
 
 This validates:
 
