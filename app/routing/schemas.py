@@ -83,3 +83,60 @@ class RoutingRecommendResponse(BaseModel):
     simulation: SimulateResponse
     charger_search_anchor: ChargerSearchAnchor
     recommended_chargers: list[RecommendedCharger]
+
+
+class RoutingPlanRequest(RoutingRecommendRequest):
+    """SOC-aware multi-stop route planning request."""
+
+    target_soc_after_charge: float = Field(default=0.70, gt=0.0, le=1.0)
+    max_charging_stops: int = Field(default=3, ge=0, le=10)
+    fallback_charger_power_kw: float = Field(default=22.0, gt=0.0)
+    include_leg_edges: bool = True
+
+
+class ConsideredCharger(BaseModel):
+    """Candidate charger considered during one failed leg."""
+
+    charger: RecommendedCharger
+    reachable: bool
+    arrival_soc: float | None = None
+    reason: str | None = None
+
+
+class DrivePlanStep(BaseModel):
+    """One drive leg in a multi-stop plan."""
+
+    step_type: Literal["drive"] = "drive"
+    from_coordinate: Coordinate
+    to_coordinate: Coordinate
+    to_label: str
+    route_edges: list[RouteEdge] | None = None
+    simulation: SimulateResponse
+
+
+class ChargePlanStep(BaseModel):
+    """One charging stop in a multi-stop plan."""
+
+    step_type: Literal["charge"] = "charge"
+    station_id: str
+    station_name: str
+    coordinate: Coordinate
+    arrival_soc: float
+    departure_soc: float
+    energy_added_kwh: float
+    estimated_charge_minutes: float
+    charger_power_kw: float
+    charge_estimate_source: Literal["catalog_power", "fallback_power"]
+    confidence: ConfidenceResult
+
+
+class RoutingPlanResponse(BaseModel):
+    """SOC-aware multi-stop route plan."""
+
+    status: Literal["destination_reached", "planning_failed", "max_stops_exceeded"]
+    plan_steps: list[DrivePlanStep | ChargePlanStep]
+    chargers_considered: list[list[ConsideredCharger]]
+    final_soc: float
+    total_distance_m: float
+    total_drive_time_s: int
+    total_estimated_charge_minutes: float

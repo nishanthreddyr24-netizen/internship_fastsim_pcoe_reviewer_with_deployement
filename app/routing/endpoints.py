@@ -6,8 +6,11 @@ from app.physics.schemas import SimulateRequest
 from app.physics.simulator import VehicleProfileError, simulate_route
 from app.physics.vehicle_store import VehicleNotFoundError
 from app.routing.charger_recommendations import recommended_chargers
+from app.routing.multi_stop_planner import plan_multi_stop_route
 from app.routing.schemas import (
     ChargerSearchAnchor,
+    RoutingPlanRequest,
+    RoutingPlanResponse,
     RoutingRecommendRequest,
     RoutingRecommendResponse,
     RoutingSimulateRequest,
@@ -46,6 +49,21 @@ def route_and_simulate(request: RoutingSimulateRequest) -> RoutingSimulateRespon
     except VehicleNotFoundError as err:
         raise HTTPException(status_code=404, detail=str(err)) from err
     except VehicleProfileError as err:
+        raise HTTPException(status_code=422, detail=str(err)) from err
+
+
+@router.post("/plan", response_model=RoutingPlanResponse)
+def plan_multi_charging_route(request: RoutingPlanRequest) -> RoutingPlanResponse:
+    """Build a greedy p_fail-aware multi-charging route plan."""
+    try:
+        return plan_multi_stop_route(request, client_from_env())
+    except ValhallaError as err:
+        raise HTTPException(status_code=502, detail=str(err)) from err
+    except VehicleNotFoundError as err:
+        raise HTTPException(status_code=404, detail=str(err)) from err
+    except VehicleProfileError as err:
+        raise HTTPException(status_code=422, detail=str(err)) from err
+    except ValueError as err:
         raise HTTPException(status_code=422, detail=str(err)) from err
 
 

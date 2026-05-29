@@ -514,6 +514,14 @@ POST /api/v1/routing/recommend
 
 It returns one primary destination route, the FASTSim simulation, the charger search anchor, and ranked charger candidates. If `include_charger_routes` is true, each charger candidate can include a Valhalla-generated `route_to_charger_edges` array that frontend/map teams can draw as possible charging paths.
 
+The multi-charging SOC-aware planner endpoint is:
+
+```text
+POST /api/v1/routing/plan
+```
+
+It repeatedly calls Valhalla and FASTSim. If the destination leg depletes, it searches chargers near the depletion coordinate, evaluates reachable charger legs, chooses the reachable charger with the lowest `p_fail`, estimates charge time to the target SOC, and repeats until the destination is reached or `max_charging_stops` is exhausted.
+
 Live production flow:
 
 ```text
@@ -662,6 +670,33 @@ curl -s \
   http://localhost/api/v1/routing/recommend
 ```
 
+To test SOC-aware multi-charging planning:
+
+```bash
+cat > /tmp/live_plan_payload.json <<'JSON'
+{
+  "vehicle_id": "IN-2025-0007",
+  "start": {"lat": 28.597861, "lon": 77.032485},
+  "end": {"lat": 28.5434438, "lon": 77.2063442},
+  "vehicle_state": {
+    "starting_soc": 0.80,
+    "protection_soc": 0.15
+  },
+  "target_soc_after_charge": 0.70,
+  "max_charging_stops": 3,
+  "charger_radius_km": 25,
+  "charger_limit": 5,
+  "fallback_charger_power_kw": 22,
+  "include_leg_edges": true
+}
+JSON
+
+curl -s \
+  -H "Content-Type: application/json" \
+  -d @/tmp/live_plan_payload.json \
+  http://localhost/api/v1/routing/plan
+```
+
 The response shows:
 
 ```text
@@ -670,6 +705,15 @@ simulation                 battery/SOC/depletion result
 charger_search_anchor      depletion coordinate if depleted, otherwise destination
 recommended_chargers       compatible chargers ranked by confidence, distance, and power
 route_to_charger_edges     optional path from anchor to each charger
+```
+
+The planner response shows:
+
+```text
+status                         destination_reached, planning_failed, or max_stops_exceeded
+plan_steps                     ordered drive and charge steps
+chargers_considered            candidates evaluated for each failed leg
+total_estimated_charge_minutes simple v1 charging-time estimate
 ```
 
 If Valhalla is not reachable, this endpoint returns HTTP `502` with a Valhalla error message. The old direct JSON endpoint still works:

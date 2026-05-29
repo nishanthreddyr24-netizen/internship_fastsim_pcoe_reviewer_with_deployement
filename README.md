@@ -329,6 +329,7 @@ GET  /health
 POST /api/v1/physics/simulate
 POST /api/v1/routing/simulate
 POST /api/v1/routing/recommend
+POST /api/v1/routing/plan
 GET  /api/v1/confidence/stations/{station_id}
 GET  /api/v1/confidence/nearby
 POST /api/v1/confidence/rank
@@ -442,6 +443,94 @@ If Valhalla cannot generate a charger detour path, the charger still remains in 
 ```
 
 This keeps charger recommendations useful even when an individual detour route fails.
+
+## Multi-Charging SOC-Aware Planner
+
+`POST /api/v1/routing/plan` is the v1 multi-stop planner. It is a greedy, SOC-aware planner rather than a full global optimizer.
+
+The planner loop is:
+
+```text
+current point + current SOC
+  -> route to destination with Valhalla
+  -> simulate that leg with FASTSim
+  -> if destination is reachable, finish
+  -> if the leg depletes, search chargers near the depletion coordinate
+  -> evaluate reachable charger legs
+  -> choose the reachable charger with the lowest p_fail
+  -> charge to target SOC
+  -> repeat until destination is reached or max stops is hit
+```
+
+The charger selection is reliability-driven:
+
+```text
+primary sort: lowest p_fail
+tie-break 1: shorter distance
+tie-break 2: higher known charger power
+```
+
+Request example:
+
+```json
+{
+  "vehicle_id": "IN-2025-0007",
+  "start": {"lat": 28.597861, "lon": 77.032485},
+  "end": {"lat": 28.5434438, "lon": 77.2063442},
+  "vehicle_state": {
+    "starting_soc": 0.8,
+    "protection_soc": 0.15
+  },
+  "target_soc_after_charge": 0.7,
+  "max_charging_stops": 3,
+  "charger_radius_km": 25,
+  "charger_limit": 5,
+  "fallback_charger_power_kw": 22,
+  "include_leg_edges": true
+}
+```
+
+Response shape:
+
+```json
+{
+  "status": "destination_reached",
+  "plan_steps": [
+    {
+      "step_type": "drive",
+      "to_label": "Station A",
+      "simulation": {"final_soc": 0.22}
+    },
+    {
+      "step_type": "charge",
+      "station_name": "Station A",
+      "arrival_soc": 0.22,
+      "departure_soc": 0.7,
+      "estimated_charge_minutes": 72.4,
+      "charge_estimate_source": "fallback_power"
+    },
+    {
+      "step_type": "drive",
+      "to_label": "destination",
+      "simulation": {"final_soc": 0.31}
+    }
+  ],
+  "chargers_considered": [],
+  "final_soc": 0.31,
+  "total_distance_m": 52000,
+  "total_drive_time_s": 4100,
+  "total_estimated_charge_minutes": 72.4
+}
+```
+
+Charging time is estimated with:
+
+```text
+energy_added_kwh = effective_battery_kwh * (target_soc_after_charge - arrival_soc)
+charge_minutes = energy_added_kwh / charger_power_kw * 60
+```
+
+If catalog charger power is missing or zero, the planner uses `fallback_charger_power_kw` and marks the charge step as `fallback_power`.
 
 ## PluginAny Routing Integration
 

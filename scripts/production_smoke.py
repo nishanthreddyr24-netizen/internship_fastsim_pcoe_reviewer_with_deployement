@@ -132,6 +132,25 @@ def assert_live_recommendations(base_url: str) -> None:
     print(f"ok: live charger recommendations generated, chargers={len(body['recommended_chargers'])}")
 
 
+def assert_live_multi_stop_plan(base_url: str) -> None:
+    payload = {
+        "vehicle_id": "IN-2025-0007",
+        "start": {"lat": 28.597861, "lon": 77.032485},
+        "end": {"lat": 28.5434438, "lon": 77.2063442},
+        "environment": {"ambient_temp_c": 25.0},
+        "vehicle_state": {"starting_soc": 0.80, "protection_soc": 0.15},
+        "target_soc_after_charge": 0.70,
+        "max_charging_stops": 3,
+        "charger_limit": 3,
+        "include_leg_edges": False,
+    }
+    body = request_json("POST", f"{base_url}/api/v1/routing/plan", payload)
+    required = {"status", "plan_steps", "chargers_considered", "final_soc"}
+    if not required <= set(body):
+        raise RuntimeError(f"live multi-stop plan returned unexpected payload: {body}")
+    print(f"ok: live multi-stop plan generated, status={body['status']}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default=os.getenv("SMOKE_BASE_URL", "http://localhost"))
@@ -155,6 +174,7 @@ def main() -> None:
     if args.live_valhalla:
         assert_live_valhalla_route(base_url)
         assert_live_recommendations(base_url)
+        assert_live_multi_stop_plan(base_url)
     print("all smoke checks passed")
 
 
