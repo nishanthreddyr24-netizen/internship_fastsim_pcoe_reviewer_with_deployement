@@ -21,6 +21,7 @@ Exposed endpoints:
 ```text
 GET  /health
 POST /api/v1/physics/simulate
+POST /api/v1/routing/simulate
 GET  /api/v1/confidence/stations/{station_id}
 GET  /api/v1/confidence/nearby
 POST /api/v1/confidence/rank
@@ -31,6 +32,7 @@ Important files:
 ```text
 Dockerfile                 Builds the FastAPI service image
 docker-compose.yml         Runs FastAPI and nginx together
+docker-compose.valhalla.yml Optional Valhalla routing service override
 nginx/nginx.conf           Reverse proxy, gzip, rate limiting, security headers
 .env.example               Runtime settings template
 requirements.txt           Python production dependencies
@@ -482,11 +484,15 @@ docker --version
 docker compose version
 ```
 
-## How Valhalla Fits Into The Final Product
+## Live Valhalla Integration
 
-The current deployment uses a pre-generated `route_edges.json`. That is good for testing and demos, but real production should generate route edges dynamically.
+The base deployment uses a pre-generated `route_edges.json`. That is good for testing and demos. Real production can now use the live endpoint:
 
-Final production flow should be:
+```text
+POST /api/v1/routing/simulate
+```
+
+Live production flow:
 
 ```text
 User selects origin and destination
@@ -498,7 +504,142 @@ User selects origin and destination
   -> API returns SOC, depletion point, and charger recommendations
 ```
 
-Recommended future Docker Compose addition:
+The code for this is already present:
+
+```text
+app/routing/endpoints.py        FastAPI live routing endpoint
+app/routing/valhalla_client.py  Valhalla HTTP client and route_edges adapter
+app/routing/schemas.py          Request/response schemas
+```
+
+The live endpoint request looks like this:
+
+```json
+{
+  "vehicle_id": "IN-2025-0007",
+  "start": {"lat": 28.597861, "lon": 77.032485},
+  "end": {"lat": 28.556, "lon": 77.1},
+  "environment": {"ambient_temp_c": 25.0},
+  "vehicle_state": {
+    "starting_soc": 0.8,
+    "protection_soc": 0.15
+  }
+}
+```
+
+The response includes both generated Valhalla edges and the existing FASTSim result:
+
+```text
+route_edges
+simulation.status
+simulation.final_soc
+simulation.depletion_coordinate
+simulation.soc_timeline
+```
+
+### What The Valhalla Person Must Provide
+
+They must provide a compiled Valhalla graph folder on the droplet:
+
+```text
+/opt/ev_platform/data/valhalla/
+  valhalla.json
+  valhalla_tiles/
+    0/
+    1/
+    2/
+  admins.sqlite
+  timezones.sqlite
+  elevation_tiles/        optional but strongly recommended for real grade_pct
+```
+
+The `valhalla.json` inside this folder must point to container paths, not Windows paths:
+
+```json
+{
+  "mjolnir": {
+    "tile_dir": "/custom_files/valhalla_tiles",
+    "tile_extract": "/custom_files/valhalla_tiles.tar",
+    "admin": "/custom_files/admins.sqlite",
+    "timezone": "/custom_files/timezones.sqlite"
+  },
+  "additional_data": {
+    "elevation": "/custom_files/elevation_tiles"
+  },
+  "skadi": {
+    "use_skadi": true
+  }
+}
+```
+
+### Start With Live Valhalla Enabled
+
+Use the override compose file:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.valhalla.yml up -d --build
+```
+
+Check containers:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.valhalla.yml ps
+```
+
+Expected:
+
+```text
+ev_fastsim_api
+ev_nginx_ingress
+ev_valhalla_geometry
+```
+
+Validate the normal API and live Valhalla route:
+
+```bash
+python3 scripts/production_smoke.py \
+  --base-url http://localhost \
+  --route-edges data/route_edges.json \
+  --live-valhalla
+```
+
+Expected extra line:
+
+```text
+ok: live Valhalla route generated, edges=...
+```
+
+### Manual Live Valhalla Test
+
+```bash
+cat > /tmp/live_route_payload.json <<'JSON'
+{
+  "vehicle_id": "IN-2025-0007",
+  "start": {"lat": 28.597861, "lon": 77.032485},
+  "end": {"lat": 28.556, "lon": 77.1},
+  "environment": {"ambient_temp_c": 25.0},
+  "vehicle_state": {
+    "starting_soc": 0.80,
+    "protection_soc": 0.15
+  }
+}
+JSON
+
+curl -s \
+  -H "Content-Type: application/json" \
+  -d @/tmp/live_route_payload.json \
+  http://localhost/api/v1/routing/simulate
+```
+
+If Valhalla is not reachable, this endpoint returns HTTP `502` with a Valhalla error message. The old direct JSON endpoint still works:
+
+```text
+POST /api/v1/physics/simulate
+```
+
+### Optional Compose Service
+
+The Valhalla service is defined in `docker-compose.valhalla.yml`:
 
 ```yaml
 valhalla:
@@ -512,7 +653,7 @@ valhalla:
   command: valhalla_service /custom_files/valhalla.json 1
 ```
 
-Then FastAPI can call:
+FastAPI calls:
 
 ```text
 http://valhalla:8002/route
@@ -520,7 +661,7 @@ http://valhalla:8002/trace_attributes
 http://valhalla:8002/height
 ```
 
-The existing `app/physics/valhalla_adapter.py` is the correct place to keep the conversion into `route_edges`.
+`app/routing/valhalla_client.py` converts those live Valhalla responses into the existing `route_edges` schema.
 
 For a 16 GB droplet:
 

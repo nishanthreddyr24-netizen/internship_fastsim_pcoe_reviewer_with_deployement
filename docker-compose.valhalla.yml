@@ -1,0 +1,18 @@
+services:
+  fastapi:
+    environment:
+      VALHALLA_URL: http://valhalla:8002
+      VALHALLA_TIMEOUT_S: ${VALHALLA_TIMEOUT_S:-10.0}
+    depends_on:
+      valhalla:
+        condition: service_started
+
+  valhalla:
+    image: ghcr.io/valhalla/valhalla:latest
+    container_name: ev_valhalla_geometry
+    restart: unless-stopped
+    expose:
+      - "8002"
+    volumes:
+      - ./data/valhalla:/custom_files:ro
+    command: valhalla_service /custom_files/valhalla.json 1

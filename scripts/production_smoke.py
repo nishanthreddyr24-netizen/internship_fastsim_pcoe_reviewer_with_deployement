@@ -99,6 +99,22 @@ def assert_confidence_loads(base_url: str) -> None:
     print(f"ok: confidence endpoint loaded, results={len(body['results'])}")
 
 
+def assert_live_valhalla_route(base_url: str) -> None:
+    payload = {
+        "vehicle_id": "IN-2025-0007",
+        "start": {"lat": 28.597861, "lon": 77.032485},
+        "end": {"lat": 28.556, "lon": 77.1},
+        "environment": {"ambient_temp_c": 25.0},
+        "vehicle_state": {"starting_soc": 0.80, "protection_soc": 0.15},
+    }
+    body = request_json("POST", f"{base_url}/api/v1/routing/simulate", payload)
+    if "route_edges" not in body or "simulation" not in body:
+        raise RuntimeError(f"live routing returned unexpected payload: {body}")
+    if body["simulation"].get("status") not in {"route_completed", "depletion_triggered"}:
+        raise RuntimeError(f"live routing simulation returned unexpected status: {body}")
+    print(f"ok: live Valhalla route generated, edges={len(body['route_edges'])}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default=os.getenv("SMOKE_BASE_URL", "http://localhost"))
@@ -107,6 +123,11 @@ def main() -> None:
         default=os.getenv("ROUTE_EDGES_PATH", "route_edges.json"),
         type=Path,
     )
+    parser.add_argument(
+        "--live-valhalla",
+        action="store_true",
+        help="Also verify /api/v1/routing/simulate against a running Valhalla service.",
+    )
     args = parser.parse_args()
     base_url = args.base_url.rstrip("/")
 
@@ -114,6 +135,8 @@ def main() -> None:
     assert_worst_case_depletion(base_url)
     assert_delhi_route(base_url, args.route_edges)
     assert_confidence_loads(base_url)
+    if args.live_valhalla:
+        assert_live_valhalla_route(base_url)
     print("all smoke checks passed")
 
 
