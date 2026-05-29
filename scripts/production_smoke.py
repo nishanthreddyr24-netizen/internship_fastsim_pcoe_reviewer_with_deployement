@@ -115,6 +115,23 @@ def assert_live_valhalla_route(base_url: str) -> None:
     print(f"ok: live Valhalla route generated, edges={len(body['route_edges'])}")
 
 
+def assert_live_recommendations(base_url: str) -> None:
+    payload = {
+        "vehicle_id": "IN-2025-0007",
+        "start": {"lat": 28.597861, "lon": 77.032485},
+        "end": {"lat": 28.556, "lon": 77.1},
+        "environment": {"ambient_temp_c": 25.0},
+        "vehicle_state": {"starting_soc": 0.80, "protection_soc": 0.15},
+        "charger_limit": 3,
+        "include_charger_routes": True,
+    }
+    body = request_json("POST", f"{base_url}/api/v1/routing/recommend", payload)
+    required = {"primary_route_edges", "simulation", "charger_search_anchor", "recommended_chargers"}
+    if not required <= set(body):
+        raise RuntimeError(f"live recommendations returned unexpected payload: {body}")
+    print(f"ok: live charger recommendations generated, chargers={len(body['recommended_chargers'])}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default=os.getenv("SMOKE_BASE_URL", "http://localhost"))
@@ -137,6 +154,7 @@ def main() -> None:
     assert_confidence_loads(base_url)
     if args.live_valhalla:
         assert_live_valhalla_route(base_url)
+        assert_live_recommendations(base_url)
     print("all smoke checks passed")
 
 

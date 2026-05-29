@@ -13,6 +13,7 @@ The project is built on top of NREL FASTSim 3. The added work in this repo lives
 5. Normalizes New Delhi charger data from `new_delhi_chargers.json` and `new_delhi_chargers.csv`.
 6. Uses PCoE battery aging data as state-of-health scenarios.
 7. Scores charger confidence from review sentiment, explicit ratings, OCPI-style status, and equipment age.
+8. Produces route-level charger recommendations that combine Valhalla paths, FASTSim SOC results, and review confidence.
 
 ## Important Outputs
 
@@ -326,6 +327,8 @@ The app exposes:
 ```text
 GET  /health
 POST /api/v1/physics/simulate
+POST /api/v1/routing/simulate
+POST /api/v1/routing/recommend
 GET  /api/v1/confidence/stations/{station_id}
 GET  /api/v1/confidence/nearby
 POST /api/v1/confidence/rank
@@ -342,6 +345,103 @@ The simulation endpoint accepts:
   "route_edges": []
 }
 ```
+
+## Route Recommendation Endpoint
+
+`POST /api/v1/routing/recommend` is the production-style orchestration endpoint. It is meant for the frontend or route-planning service that needs to show the driver the route and the charging options in one response.
+
+The flow is:
+
+```text
+user start/end
+  -> Valhalla generates the primary route
+  -> route is converted into route_edges
+  -> FASTSim simulates SOC and depletion
+  -> charger search anchor is chosen
+  -> compatible chargers are ranked by confidence, distance, and power
+  -> optional Valhalla paths are generated from the anchor to each charger
+```
+
+The charger search anchor is:
+
+```text
+depletion coordinate, if the route crosses the protection SOC
+destination coordinate, if the route completes safely
+```
+
+Request example:
+
+```json
+{
+  "vehicle_id": "IN-2025-0007",
+  "start": {"lat": 28.597861, "lon": 77.032485},
+  "end": {"lat": 28.556, "lon": 77.1},
+  "environment": {"ambient_temp_c": 25.0},
+  "vehicle_state": {
+    "starting_soc": 0.8,
+    "protection_soc": 0.15
+  },
+  "charger_radius_km": 25.0,
+  "charger_limit": 5,
+  "compatible_only": true,
+  "include_charger_routes": true
+}
+```
+
+Response shape:
+
+```json
+{
+  "primary_route_edges": [],
+  "simulation": {
+    "status": "route_completed",
+    "final_soc": 0.796069,
+    "depletion_coordinate": null
+  },
+  "charger_search_anchor": {
+    "coordinate": {"lat": 28.556, "lon": 77.1},
+    "reason": "destination"
+  },
+  "recommended_chargers": [
+    {
+      "station_id": "557560",
+      "station_name": "A2, Commercial Complex Opp Jwala Heri Market",
+      "connector_types": "CCS2;Type 2",
+      "distance_from_anchor_km": 12.584753,
+      "confidence_source": "reviews",
+      "confidence": {
+        "confidence": 0.76,
+        "p_fail": 0.24
+      },
+      "route_status": "generated",
+      "route_to_charger_edges": []
+    }
+  ]
+}
+```
+
+How possible paths are shown:
+
+```text
+primary_route_edges
+  Main route from the user's start to destination.
+
+recommended_chargers[].route_to_charger_edges
+  Optional route from the charger search anchor to that charger.
+  This is how the UI can draw possible charging paths.
+```
+
+If Valhalla cannot generate a charger detour path, the charger still remains in the list:
+
+```json
+{
+  "route_status": "unavailable",
+  "route_to_charger_edges": null,
+  "route_error": "Valhalla trace_attributes returned no routable edges"
+}
+```
+
+This keeps charger recommendations useful even when an individual detour route fails.
 
 ## PluginAny Routing Integration
 

@@ -70,6 +70,7 @@ Required runtime data:
 ```text
 vehicles_enrichment_GLOBAL_20260517_0915.csv
 india_ev_reviews.xlsx
+normalized_new_delhi_chargers.csv
 route_edges.json
 route_edges_charger.json
 valhalla.json
@@ -150,6 +151,7 @@ From the repository root on the droplet:
 mkdir -p data
 cp vehicles_enrichment_GLOBAL_20260517_0915.csv data/
 cp india_ev_reviews.xlsx data/
+cp normalized_new_delhi_chargers.csv data/
 cp route_edges.json data/
 cp route_edges_charger.json data/
 cp valhalla.json data/
@@ -180,6 +182,7 @@ WEB_CONCURRENCY=2
 GUNICORN_TIMEOUT=120
 VEHICLE_ENRICHMENT_PATH=/data/vehicles_enrichment_GLOBAL_20260517_0915.csv
 INDIA_EV_REVIEWS_PATH=/data/india_ev_reviews.xlsx
+NORMALIZED_CHARGERS_PATH=/data/normalized_new_delhi_chargers.csv
 ROUTE_EDGES_PATH=/data/route_edges.json
 CHARGER_ROUTE_EDGES_PATH=/data/route_edges_charger.json
 VALHALLA_CONFIG_PATH=/data/valhalla.json
@@ -503,6 +506,14 @@ The base deployment uses a pre-generated `route_edges.json`. That is good for te
 POST /api/v1/routing/simulate
 ```
 
+The final charger recommendation endpoint is:
+
+```text
+POST /api/v1/routing/recommend
+```
+
+It returns one primary destination route, the FASTSim simulation, the charger search anchor, and ranked charger candidates. If `include_charger_routes` is true, each charger candidate can include a Valhalla-generated `route_to_charger_edges` array that frontend/map teams can draw as possible charging paths.
+
 Live production flow:
 
 ```text
@@ -640,6 +651,25 @@ curl -s \
   -H "Content-Type: application/json" \
   -d @/tmp/live_route_payload.json \
   http://localhost/api/v1/routing/simulate
+```
+
+To test route plus charger recommendations:
+
+```bash
+curl -s \
+  -H "Content-Type: application/json" \
+  -d @/tmp/live_route_payload.json \
+  http://localhost/api/v1/routing/recommend
+```
+
+The response shows:
+
+```text
+primary_route_edges        main route to the destination
+simulation                 battery/SOC/depletion result
+charger_search_anchor      depletion coordinate if depleted, otherwise destination
+recommended_chargers       compatible chargers ranked by confidence, distance, and power
+route_to_charger_edges     optional path from anchor to each charger
 ```
 
 If Valhalla is not reachable, this endpoint returns HTTP `502` with a Valhalla error message. The old direct JSON endpoint still works:

@@ -9,6 +9,7 @@ services:
     environment:
       VEHICLE_ENRICHMENT_PATH: /data/vehicles_enrichment_GLOBAL_20260517_0915.csv
       INDIA_EV_REVIEWS_PATH: /data/india_ev_reviews.xlsx
+      NORMALIZED_CHARGERS_PATH: /data/normalized_new_delhi_chargers.csv
     expose:
       - "8000"
     volumes:
