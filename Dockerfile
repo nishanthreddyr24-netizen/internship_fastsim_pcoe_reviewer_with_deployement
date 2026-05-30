@@ -1,3 +1,28 @@
+FROM python:3.11-slim AS fastsim-builder
+
+ENV CARGO_HOME=/cargo \
+    RUSTUP_HOME=/rustup
+
+WORKDIR /build
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential curl libssl-dev patchelf pkg-config \
+    && rm -rf /var/lib/apt/lists/* \
+    && curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal
+
+ENV PATH="/cargo/bin:${PATH}"
+
+RUN pip install --no-cache-dir "maturin>=1.8"
+
+COPY pyproject.toml Cargo.toml Cargo.lock MANIFEST.in LICENSE.md README.md ./
+COPY fastsim-core ./fastsim-core
+COPY fastsim-py ./fastsim-py
+COPY fastsim-cli ./fastsim-cli
+COPY cal_and_val ./cal_and_val
+COPY python ./python
+
+RUN maturin build --release --manifest-path fastsim-py/Cargo.toml --out /wheels
+
 FROM python:3.11-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -13,8 +38,11 @@ RUN apt-get update \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY --from=fastsim-builder /wheels/*.whl /tmp/
+RUN pip install --no-cache-dir --no-deps /tmp/*.whl \
+    && rm -f /tmp/*.whl
+
 COPY app ./app
-COPY python ./python
 COPY vehicles_enrichment_GLOBAL_20260517_0915.csv .
 COPY india_ev_reviews.xlsx .
 COPY normalized_new_delhi_chargers.csv .

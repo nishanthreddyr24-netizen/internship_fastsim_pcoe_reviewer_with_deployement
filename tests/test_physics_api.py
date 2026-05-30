@@ -105,3 +105,28 @@ def test_unknown_vehicle_returns_404() -> None:
     response = client.post("/api/v1/physics/simulate", json=payload)
 
     assert response.status_code == 404
+
+
+def test_vehicle_state_state_of_health_changes_effective_capacity() -> None:
+    payload = synthetic_payload(distance_m=1200.0, starting_soc=0.8)
+    payload["vehicle_state"] = {
+        "starting_soc": 0.8,
+        "protection_soc": 0.15,
+        "state_of_health": 0.7,
+    }
+
+    response = client.post("/api/v1/physics/simulate", json=payload)
+    body = response.json()
+
+    assert response.status_code == 200, body
+    assert body["battery_correction"]["soh_factor"] == 0.7
+    assert body["vehicle"]["effective_kwh"] < body["vehicle"]["usable_ess_kwh"]
+
+
+def test_runtime_diagnostics_exposes_engine_mode() -> None:
+    response = client.get("/diagnostics/runtime")
+    body = response.json()
+
+    assert response.status_code == 200, body
+    assert body["status"] == "ok"
+    assert body["simulation_engine"] in {"fastsim", "synthetic_fallback"}

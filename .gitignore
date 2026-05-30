@@ -16,6 +16,8 @@ dist
 *pymoo_res*
 *env*/
 .env
+data/
+custom_files/
 rust/
 *.dat
 .zed

@@ -1,5 +1,47 @@
 services:
-  fastapi:
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: ev_nginx_ingress
+    restart: unless-stopped
+    depends_on:
+      orchestrator:
+        condition: service_healthy
+    ports:
+      - "${HTTP_PORT:-80}:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+
+  orchestrator:
+    build:
+      context: ./nodejs-api
+    container_name: ev_node_orchestrator
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: 3000
+      PYTHON_ENGINE_URL: http://fastsim:8000
+      SUPABASE_RPC_NAME: ${SUPABASE_RPC_NAME:-find_nearest_chargers}
+      SUPABASE_SEARCH_RADIUS_METERS: ${SUPABASE_SEARCH_RADIUS_METERS:-25000}
+    expose:
+      - "3000"
+    depends_on:
+      fastsim:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  fastsim:
     build:
       context: .
     container_name: ev_fastsim_api
@@ -10,6 +52,9 @@ services:
       VEHICLE_ENRICHMENT_PATH: /data/vehicles_enrichment_GLOBAL_20260517_0915.csv
       INDIA_EV_REVIEWS_PATH: /data/india_ev_reviews.xlsx
       NORMALIZED_CHARGERS_PATH: /data/normalized_new_delhi_chargers.csv
+      ROUTE_EDGES_PATH: /data/route_edges.json
+      CHARGER_ROUTE_EDGES_PATH: /data/route_edges_charger.json
+      VALHALLA_TIMEOUT_S: ${VALHALLA_TIMEOUT_S:-10.0}
     expose:
       - "8000"
     volumes:
@@ -26,15 +71,3 @@ services:
       timeout: 5s
       retries: 3
       start_period: 20s
-
-  nginx:
-    image: nginx:1.27-alpine
-    container_name: ev_nginx_ingress
-    restart: unless-stopped
-    depends_on:
-      fastapi:
-        condition: service_healthy
-    ports:
-      - "${HTTP_PORT:-80}:80"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro

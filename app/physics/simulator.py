@@ -293,6 +293,10 @@ def simulate_route(request: SimulateRequest) -> SimulateResponse:
         profile = request.custom_ev_profile.to_vehicle_profile()
     else:
         profile = resolve_vehicle_profile(request.vehicle_id, request.vehicle_profile)
+    if request.vehicle_state is not None and request.vehicle_state.state_of_health is not None:
+        profile = profile.model_copy(
+            update={"state_of_health": request.vehicle_state.state_of_health},
+        )
 
     if fsim is None:
         return _simulate_route_synthetic(request, profile)

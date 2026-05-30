@@ -45,6 +45,14 @@ def assert_health(base_url: str) -> None:
     print("ok: /health")
 
 
+def assert_runtime_diagnostics(base_url: str) -> None:
+    body = request_json("GET", f"{base_url}/diagnostics/runtime")
+    engine = body.get("simulation_engine")
+    if body.get("status") != "ok" or engine not in {"fastsim", "synthetic_fallback"}:
+        raise RuntimeError(f"unexpected runtime diagnostics response: {body}")
+    print(f"ok: runtime diagnostics, simulation_engine={engine}")
+
+
 def assert_worst_case_depletion(base_url: str) -> None:
     payload = {
         "vehicle_id": "IN-2025-0007",
@@ -168,6 +176,7 @@ def main() -> None:
     base_url = args.base_url.rstrip("/")
 
     assert_health(base_url)
+    assert_runtime_diagnostics(base_url)
     assert_worst_case_depletion(base_url)
     assert_delhi_route(base_url, args.route_edges)
     assert_confidence_loads(base_url)

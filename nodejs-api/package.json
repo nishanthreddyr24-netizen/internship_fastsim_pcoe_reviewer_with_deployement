@@ -1,0 +1,14 @@
+{
+  "name": "ev-routing-orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Legacy-compatible Node.js proxy for the EV routing FastAPI engine.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

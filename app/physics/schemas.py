@@ -82,6 +82,7 @@ class Environment(BaseModel):
 class VehicleState(BaseModel):
     starting_soc: float | None = Field(default=None, gt=0.0, le=1.0)
     protection_soc: float | None = Field(default=None, ge=0.0, lt=1.0)
+    state_of_health: float | None = Field(default=None, ge=0.0, le=1.0)
     hvac_power_kw: float | None = Field(default=None, ge=0.0)
     adjusted_rr_coef: float | None = Field(default=None, gt=0.0)
 

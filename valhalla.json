@@ -12,12 +12,12 @@
     "use_simple_mem_cache": false,
     "tile_dir": "/custom_files/valhalla_tiles",
     "tile_extract": "/custom_files/valhalla_tiles.tar",
-    "traffic_extract": "/data/valhalla/traffic.tar",
+    "traffic_extract": "/custom_files/traffic.tar",
     "admin": "/custom_files/admins.sqlite",
-    "landmarks": "/data/valhalla/landmarks.sqlite",
+    "landmarks": "/custom_files/landmarks.sqlite",
     "timezone": "/custom_files/timezones.sqlite",
-    "transit_dir": "/data/valhalla/transit",
-    "transit_feeds_dir": "/data/valhalla/transit_feeds",
+    "transit_dir": "/custom_files/transit",
+    "transit_feeds_dir": "/custom_files/transit_feeds",
     "transit_pbf_limit": 20000,
     "hierarchy": true,
     "shortcuts": true,
@@ -47,7 +47,7 @@
     }
   },
   "additional_data": {
-    "elevation": "/data/valhalla/elevation/"
+    "elevation": "/custom_files/elevation_tiles"
   },
   "loki": {
     "actions": [
