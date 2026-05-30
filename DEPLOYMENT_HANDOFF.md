@@ -324,6 +324,47 @@ The Valhalla config paths must point inside the container, for example:
 /custom_files/timezones.sqlite
 ```
 
+### If Files Arrive In A `valhalla/` Folder
+
+The local handoff from Nikhil may arrive as:
+
+```text
+valhalla/custom_files/
+valhalla/data/
+valhalla/project/
+```
+
+For Docker, copy the contents of `valhalla/custom_files/` into the repo root
+`custom_files/` directory:
+
+```powershell
+mkdir custom_files
+Copy-Item -Path valhalla\custom_files\* -Destination custom_files -Recurse -Force
+Copy-Item -Path valhalla.json -Destination custom_files\valhalla.json -Force
+```
+
+The second copy is important. The `valhalla/custom_files/valhalla.json` file may
+contain Windows paths such as `C:/valhalla/custom_files/...`; Docker needs the
+repo's normalized config with `/custom_files/...` paths.
+
+On the droplet, the equivalent is:
+
+```bash
+mkdir -p custom_files
+cp -a valhalla/custom_files/. custom_files/
+cp valhalla.json custom_files/valhalla.json
+```
+
+The `valhalla/project/` folder may include helper scripts:
+
+- `route.py` generates a direct `route_edges.json`.
+- `EV_route.py` generates a charger-stop `route_edges_charger.json`.
+
+Those scripts use the local Python `valhalla` binding and may hardcode
+`C:/valhalla/...` paths. They are optional data-generation helpers. The Docker
+deployment does not require running them because the production API calls the
+Valhalla container over HTTP.
+
 Run the base stack first without Valhalla:
 
 ```bash
